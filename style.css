@@ -1,7 +1,7 @@
 :root {
   --first: #0f1016;
   --second: #fff;
-  --third: #0f4bb9;
+  --third: #014735;
   --dark-grey: #666666;
   --medium-grey: #e6e0e0;
   --light-grey: #fafafa;
@@ -41,7 +41,7 @@ body {
   position: fixed;
   z-index: 9999;
   top: 0;
-  background-color: #014735;
+  background-color: var(--third);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,6 +396,27 @@ nav a {
     color: var(--third);
     cursor: pointer;
   }
+}
+
+/* About Us */
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--first);
+}
+
+.about-us h1 {
+  text-align: center;
+  line-height: 1.5;
+  text-decoration: underline;
+}
+
+.about-us p {
+  width: 800px;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 /* Services */
