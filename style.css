@@ -41,7 +41,7 @@ body {
   position: fixed;
   z-index: 9999;
   top: 0;
-  background-color: var(--third);
+  background-color: #014735;
   display: flex;
   justify-content: center;
   align-items: center;
