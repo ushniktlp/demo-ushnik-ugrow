@@ -37,70 +37,42 @@ body {
 /* Top Navigation Bar */
 .top-navbar {
   width: 100%;
-  height: 60px;
+  height: 50px;
   position: fixed;
   z-index: 9999;
   top: 0;
-  background-color: var(--second);
+  background-color: var(--third);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .contacts {
-  margin-left: 3%;
-  margin-right: 29%;
+  width: 70px;
+  margin-right: 65%;
 }
 
 .contacts p {
-  color: var(--dark-grey);
+  display: flex;
+  color: var(--second);
 }
 
 .contacts span {
-  color: var(--third);
+  color: var(--second);
 }
 
 .contacts span:hover {
-  color: var(--third);
+  color: var(--second);
   cursor: pointer;
 }
 
-.misc p {
+.social-logos-header ul {
   display: flex;
-  gap: 15px;
-}
-
-.misc a {
-  color: var(--dark-grey);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.misc a:hover {
-  color: var(--third);
-  transition: var(--transition);
-  text-decoration: none;
-}
-
-.seperator {
-  color: var(--dark-grey);
-}
-
-.languages {
-  display: flex;
-  padding-right: 10px;
   list-style: none;
 }
 
-.current-language {
-  color: var(--first);
-  font-weight: bold;
-}
-
-.language-selector {
-  color: var(--third);
-  text-decoration: none;
-  font-weight: bold;
+.seperator {
+  color: var(--second);
 }
 
 @media (max-width: 600px) {
@@ -126,7 +98,7 @@ body {
   }
 
   .language-selector {
-    color: var(--third);
+    color: var(--second);
     text-decoration: none;
     font-weight: bold;
   }
@@ -146,7 +118,7 @@ body {
 }
 
 .logo-link {
-  margin-left: 10%;
+  margin-left: 15%;
   margin-right: 10%;
 }
 
@@ -155,9 +127,8 @@ body {
 }
 
 .links-container {
-  width: 100%;
+  width: 85%;
   height: 100%;
-  margin-right: 107px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,7 +176,7 @@ body {
 }
 
 .nav-link {
-  width: 50px;
+  width: 120px;
   font-size: 15px;
   font-weight: 500;
   list-style: none;
@@ -342,21 +313,26 @@ nav a {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: url(images/homebackground.jpg);
+  background-image: url(./images/Video-Placeholder.png);
 }
 
 .home-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   color: var(--second);
 }
 
-.home-heading-1 {
-  font-size: 20px;
+.home-heading h1 {
+  width: 800px;
+  font-size: 50px;
+  line-height: 1;
 }
 
-.home-heading-2 {
-  font-size: 50px;
+.home-heading p {
+  width: 800px;
+  font-size: 20px;
   line-height: 1.2;
 }
 
@@ -2955,7 +2931,7 @@ nav a {
 }
 
 .social-links-footer {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
