@@ -314,7 +314,7 @@ nav a {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: url(./images/whitebackground.jpg);
+  background-image: url(images/whitebackground.jpg);
 }
 
 .home-heading {
