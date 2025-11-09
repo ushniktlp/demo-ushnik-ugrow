@@ -314,7 +314,7 @@ nav a {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: url(./images/Video-Placeholder.png);
+  background-image: url(./images/homebackground.jpg);
 }
 
 .home-heading {
@@ -322,7 +322,7 @@ nav a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: var(--second);
+  color: var(--first);
 }
 
 .home-heading h1 {
