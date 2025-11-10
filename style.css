@@ -49,7 +49,7 @@ body {
 
 .contacts {
   width: 70px;
-  margin-right: 65%;
+  margin-right: 60%;
 }
 
 .contacts p {
@@ -117,18 +117,13 @@ body {
   align-items: center;
 }
 
-.logo-link {
-  margin-left: 15%;
-  margin-right: 10%;
-}
-
 .logo-image {
   width: 40px;
   height: 60px;
 }
 
 .links-container {
-  width: 85%;
+  width: 72%;
   height: 100%;
   display: flex;
   justify-content: center;
