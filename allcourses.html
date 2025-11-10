@@ -47,69 +47,95 @@
         margin: 10px 0 0;
       }
 
-      .card-container-1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .card-container-2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .card-container-3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
       }
 
       .card {
-        background-color: white;
-        width: 360px;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        padding: 20px;
-        transition: transform 0.2s;
+        display: flex;
+        background: #fff;
+        padding: 16px;
+        gap: 16px;
       }
 
-      .card:hover {
-        transform: scale(1.02);
-      }
-
-      .card h2 {
-        color: #333;
-        margin-bottom: 10px;
-      }
-
-      .card p {
-        color: #555;
-        line-height: 1.5;
-      }
-
-      .section-title {
+      .logo {
         font-weight: bold;
-        color: #222;
-        margin-top: 15px;
-        margin-bottom: 5px;
+        color: #014735;
+        margin-bottom: 8px;
       }
 
-      .list {
-        margin: 0;
-        padding-left: 18px;
+      .badge {
+        display: inline-block;
+        padding: 6px 8px;
+        border: 1px solid #e6f0ff;
+        background: #f8fbff;
+        font-size: 12px;
+        color: #014735;
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        margin: 0 0 6px 0;
+        font-size: 22px;
+      }
+
+      .subtitle {
+        color: #666;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      .chips {
+        margin: 10px 0;
+      }
+
+      .chip {
+        display: inline-block;
+        padding: 6px 8px;
+        margin: 4px 4px 0 0;
+        border: 1px solid #e0e7ff;
+        background: #fbfdff;
+        font-size: 13px;
+        color: #014735;
+      }
+
+      .section {
+        margin-top: 12px;
+      }
+
+      ul.topics {
+        margin: 6px 0 0 18px;
+        color: #333;
       }
 
       .outcome {
         background-color: #eef6ff;
-        border-left: 4px solid #007bff;
+        border-left: 4px solid #014735;
         padding: 10px;
         border-radius: 6px;
         margin-top: 15px;
         color: #333;
+      }
+
+      .buttons {
+        margin-top: 12px;
+      }
+
+      .btn {
+        padding: 8px 12px;
+        border: 1px solid #014735;
+        background: #014735;
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+
+      .btn-secondary {
+        background: #fff;
+        color: #333;
+        border: 1px solid #ccc;
       }
     </style>
   </head>
@@ -294,163 +320,235 @@
         </div>
       </div>
     </nav>
-    <div class="card-container-1">
+
+    <div class="container">
       <div class="card">
-        <h2>UI/UX Developer Course</h2>
-        <p>
-          A complete design-centric program covering user research, prototyping,
-          wireframes, interaction design, usability principles, and hands-on
-          Figma projects.
-        </p>
+        <div>
+          <h1>UI/UX Developer Course</h1>
+          <div class="subtitle">
+            A complete design-centric program covering user research,
+            prototyping, wireframes, interaction design, usability principles,
+            and hands-on Figma projects.
+          </div>
+          <strong>Key Skills:</strong>
+          <div class="chips">
+            <span class="chip">Figma</span>
+            <span class="chip">Prototyping</span>
+            <span class="chip">Design Thinking</span>
+            <span class="chip">User Journeys</span>
+            <span class="chip">Color Theory</span>
+            <span class="chip">UI Components</span>
+            <span class="chip">Mobile/Web layouts</span>
+          </div>
 
-        <div class="section-title">Key Skills:</div>
-        <ul class="list">
-          <li>Figma</li>
-          <li>Prototyping</li>
-          <li>Design Thinking</li>
-          <li>User Journeys</li>
-          <li>Color Theory</li>
-          <li>UI Components</li>
-          <li>Mobile/Web Layouts</li>
-        </ul>
+          <div class="outcome">
+            <strong>Outcome:</strong> Portfolio + 3 Complete UI/UX Projects.
+          </div>
 
-        <div class="section-title">Outcome:</div>
-        <div class="outcome">Portfolio + 3 Complete UI/UX Projects</div>
-      </div>
-
-      <div class="card">
-        <h2>AI & Machine Learning Program</h2>
-        <p>
-          A structured course covering Python foundations, ML algorithms, model
-          tuning, real-world datasets, and AI automation.
-        </p>
-
-        <div class="section-title">Key Skills:</div>
-        <ul class="list">
-          <li>Regression</li>
-          <li>Classification</li>
-          <li>CNNs</li>
-          <li>NLP</li>
-          <li>Reinforcement Learning</li>
-          <li>MLOps basics</li>
-        </ul>
-
-        <div class="section-title">Outcome:</div>
-        <div class="outcome">3 ML Projects + 1 Capstone</div>
-      </div>
-
-      <div class="card">
-        <h2>Python Full Stack Developer</h2>
-        <p>Frontend + Backend + Database + Deployment</p>
-
-        <div class="section-title">Technologies Covered:</div>
-        <ul class="list">
-          <li>Python</li>
-          <li>Django/Flask</li>
-          <li>HTML/CSS/JS</li>
-          <li>APIs</li>
-          <li>SQL/NoSQL</li>
-          <li>Cloud Deployment.</li>
-        </ul>
-
-        <div class="section-title">Outcome:</div>
-        <div class="outcome">Portfolio + 3 Complete UI/UX Projects</div>
-      </div>
-
-      <div class="card">
-        <h2>Python for AI & ML</h2>
-        <p>
-          A course for those who want to strengthen Python exclusively for data
-          science and AI.
-        </p>
-
-        <div class="section-title">Modules:</div>
-        <ul class="list">
-          <li>NumPy</li>
-          <li>Pandas</li>
-          <li>Matplotlib</li>
-          <li>Exploratory Data Analysis</li>
-          <li>Handling Datasets</li>
-          <li>Feature Engineering</li>
-        </ul>
+          <div class="buttons">
+            <button class="btn">Enroll Now</button>
+            <button class="btn btn-secondary">View Curriculum</button>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="card-container-2">
+    <div class="container">
       <div class="card">
-        <h2>
-          Advanced Mathematics for Machine Learning (Enhanced + SEO Optimized)
-        </h2>
+        <div>
+          <h1>AI & Machine Learning Program</h1>
+          <div class="subtitle">
+            A structured course covering Python foundations, ML algorithms,
+            model tuning, real-world datasets, and AI automation.
+          </div>
+          <strong>Key Skills:</strong>
+          <div class="chips">
+            <span class="chip">Regression</span>
+            <span class="chip">Classification</span>
+            <span class="chip">CNNs</span>
+            <span class="chip">NLP</span>
+            <span class="chip">Reinforcement Learning,</span>
+            <span class="chip">MLOps basics.</span>
+          </div>
 
-        <div class="section-title">SEO Tags to integrate:</div>
-        <ul class="list">
-          <li>Mathematics for Machine Learning Course</li>
-          <li>ML Math Foundations India</li>
-          <li>Linear Algebra for AI</li>
-          <li>Probability & Statistics for Machine Learning</li>
-          <li>Calculus for Data Science</li>
-          <li>Best Maths Course for ML Beginners</li>
-        </ul>
+          <div class="outcome">
+            <strong>Outcome:</strong> 3 ML Projects + 1 Capstone.
+          </div>
 
-        <p>
-          A dedicated math foundation program built to help learners understand
-          the mathematical backbone of AI and Machine Learning. The course
-          simplifies complex concepts with visual explanations, real-time
-          examples, and step-by-step problem solving.
-        </p>
-
-        <div class="section-title">Topics Covered:</div>
-        <ul class="list">
-          <li>Linear Algebra: vectors, matrices, eigenvalues, eigenvectors</li>
-          <li>
-            Probability & Statistics: distributions, Bayes theorem, conditional
-            probability
-          </li>
-          <li>Calculus for ML: derivatives, gradients, optimization</li>
-          <li>Gradient Descent & Loss Functions</li>
-          <li>Matrix Decompositions (SVD, PCA math)</li>
-          <li>Mathematical modeling with real datasets</li>
-        </ul>
-
-        <div class="section-title">Outcome:</div>
-        <div class="outcome">ML-ready mathematical foundation.</div>
+          <div class="buttons">
+            <button class="btn">Enroll Now</button>
+            <button class="btn btn-secondary">View Curriculum</button>
+          </div>
+        </div>
       </div>
+    </div>
 
+    <div class="container">
       <div class="card">
-        <h2>MERN Stack Developer Program</h2>
-        <p>Complete JavaScript-based full-stack development.</p>
+        <div>
+          <h1>Python Full Stack Developer</h1>
+          <div class="subtitle">
+            Frontend + Backend + Database + Deployment.
+          </div>
+          <strong> Technologies Covered:</strong>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">Django/Flask</span>
+            <span class="chip">HTML/CSS/JS</span>
+            <span class="chip">APIs</span>
+            <span class="chip">SQL/NoSQL</span>
+            <span class="chip">Cloud Deployment</span>
+          </div>
 
-        <div class="section-title">Technologies:</div>
-        <ul class="list">
-          <li>MongoDB</li>
-          <li>Express.js</li>
-          <li>React.js</li>
-          <li>Node.js</li>
-        </ul>
+          <div class="outcome">
+            <strong>Outcome:</strong> Complete production-ready web application.
+          </div>
 
-        <div class="section-title">Outcome:</div>
-        <div class="outcome">A full-featured web application + Deployment.</div>
+          <div class="buttons">
+            <button class="btn">Enroll Now</button>
+            <button class="btn btn-secondary">View Curriculum</button>
+          </div>
+        </div>
       </div>
+    </div>
 
+    <div class="container">
       <div class="card">
-        <h2>DevOps Program</h2>
-        <p>
-          End-to-end training on automation, CI/CD, cloud workflow, and
-          infrastructure deployment.
-        </p>
+        <div>
+          <h1>Python for AI & ML</h1>
+          <div class="subtitle">
+            A course for those who want to strengthen Python exclusively for
+            data science and AI.
+          </div>
+          <strong>Modules:</strong>
+          <div class="chips">
+            <span class="chip">NumPy</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">Matplotlib</span>
+            <span class="chip">Exploratory Data Analysis</span>
+            <span class="chip">Handling Datasets</span>
+            <span class="chip">Feature Engineering</span>
+          </div>
 
-        <div class="section-title">Tools Covered:</div>
-        <ul class="list">
-          <li>Git</li>
-          <li>Docker</li>
-          <li>Kubernetes</li>
-          <li>Jenkins</li>
-          <li>Terraform</li>
-          <li>AWS/Azure basics.</li>
-        </ul>
+          <div class="buttons">
+            <button class="btn">Enroll Now</button>
+            <button class="btn btn-secondary">View Curriculum</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div class="section-title">Outcome:</div>
-        <div class="outcome">Hands-on DevOps pipelines + cloud deployment.</div>
+    <div class="container">
+      <div class="card">
+        <div>
+          <h1>Advanced Mathematics for Machine Learning</h1>
+          <div class="subtitle">(Enhanced + SEO Optimized)</div>
+
+          <strong> SEO Tags to integrate:</strong>
+          <div class="chips">
+            <span class="chip">Mathematics for Machine Learning Course</span>
+            <span class="chip">ML Math Foundations India</span>
+            <span class="chip">Linear Algebra for AI</span>
+            <span class="chip">Probability &amp; Statistics for ML</span>
+            <span class="chip">Calculus for Data Science</span>
+            <span class="chip">Best Maths Course for ML Beginners</span>
+          </div>
+
+          <div class="section">
+            <strong>Course Description:</strong>
+            <p>
+              A dedicated math foundation program built to help learners
+              understand the mathematical backbone of AI and Machine Learning.
+              The course simplifies complex concepts with visual explanations,
+              real-time examples, and step-by-step problem solving.
+            </p>
+          </div>
+
+          <div class="section">
+            <strong>Topics Covered:</strong>
+            <ul class="topics">
+              <li>
+                Linear Algebra: vectors, matrices, eigenvalues, eigenvectors
+              </li>
+              <li>
+                Probability &amp; Statistics: distributions, Bayes theorem,
+                conditional probability
+              </li>
+              <li>Calculus for ML: derivatives, gradients, optimization</li>
+              <li>Gradient Descent &amp; Loss Functions</li>
+              <li>Matrix Decompositions (SVD, PCA math)</li>
+              <li>Mathematical modeling with real datasets</li>
+            </ul>
+          </div>
+
+          <div class="outcome">
+            <strong>Outcome:</strong> ML-ready mathematical foundation.
+          </div>
+
+          <div class="buttons">
+            <button class="btn">Enroll Now</button>
+            <button class="btn btn-secondary">View Curriculum</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <div>
+          <h1>MERN Stack Developer Program</h1>
+          <div class="subtitle">
+            Complete JavaScript-based full-stack development.
+          </div>
+          <strong>Technologies:</strong>
+          <div class="chips">
+            <span class="chip">MongoDB</span>
+            <span class="chip">Express.js</span>
+            <span class="chip">React.js</span>
+            <span class="chip">Node.js</span>
+          </div>
+
+          <div class="outcome">
+            <strong>Outcome:</strong> A full-featured web application +
+            Deployment.
+          </div>
+
+          <div class="buttons">
+            <button class="btn">Enroll Now</button>
+            <button class="btn btn-secondary">View Curriculum</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <div>
+          <h1>DevOps Program</h1>
+          <div class="subtitle">
+            End-to-end training on automation, CI/CD, cloud workflow, and
+            infrastructure deployment.
+          </div>
+          <strong>Tools Covered:</strong>
+          <div class="chips">
+            <span class="chip">Git</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Kubernetes</span>
+            <span class="chip">Jenkins</span>
+            <span class="chip">Terraform</span>
+            <span class="chip">AWS/Azure basics</span>
+          </div>
+
+          <div class="outcome">
+            <strong>Outcome:</strong> Hands-on DevOps pipelines + cloud
+            deployment.
+          </div>
+
+          <div class="buttons">
+            <button class="btn">Enroll Now</button>
+            <button class="btn btn-secondary">View Curriculum</button>
+          </div>
+        </div>
       </div>
     </div>
   </body>
