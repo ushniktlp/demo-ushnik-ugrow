@@ -118,8 +118,8 @@ body {
 }
 
 .logo-image {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
 }
 
 .links-container {
@@ -878,6 +878,21 @@ ul.topics {
   font-family: "Jost", sans-serif;
   transition: var(--transition);
   cursor: pointer;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.statistics h1 {
+  font-size: 70px;
+  color: var(--first);
+}
+
+.statistics h3 {
+  text-align: center;
+  color: var(--first);
 }
 
 .social-logo-footer {
