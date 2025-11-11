@@ -431,7 +431,7 @@ nav a {
 .course-card {
   width: 200px;
   height: 350px;
-  background-color: lightgray;
+  background-color: var(--second);
   border-left: 5px solid #014735;
   border-radius: 30px;
   color: #014735;
@@ -3145,3 +3145,4 @@ ul.topics {
     background-color: var(--medium-footer);
   }
 }
+
