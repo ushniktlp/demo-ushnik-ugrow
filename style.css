@@ -123,11 +123,11 @@ body {
 }
 
 .links-container {
-  width: 72%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 50px;
 }
 
 .dropdown {
@@ -172,7 +172,6 @@ body {
 }
 
 .nav-link {
-  width: 120px;
   font-size: 15px;
   font-weight: 500;
   list-style: none;
@@ -414,6 +413,135 @@ nav a {
   line-height: 1.2;
 }
 
+.courses-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.courses-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.course-card {
+  width: 200px;
+  height: 350px;
+  background-color: lightgray;
+  border-left: 5px solid #014735;
+  border-radius: 30px;
+  color: #014735;
+  text-align: center;
+}
+
+.course-card img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.course-card h3 {
+  padding-top: 30px;
+}
+
+.course-card button {
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #014735;
+  color: white;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 16px;
+  gap: 16px;
+}
+
+.logo {
+  font-weight: bold;
+  color: #014735;
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 8px;
+  border: 1px solid #e6f0ff;
+  background: #f8fbff;
+  font-size: 12px;
+  color: #014735;
+  margin-bottom: 8px;
+}
+
+h1 {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.chips {
+  margin: 10px 0;
+}
+
+.chip {
+  display: inline-block;
+  padding: 6px 8px;
+  margin: 4px 4px 0 0;
+  border: 1px solid #e0e7ff;
+  background: #fbfdff;
+  font-size: 13px;
+  color: #014735;
+}
+
+.section {
+  margin-top: 12px;
+}
+
+ul.topics {
+  margin: 6px 0 0 18px;
+  color: #333;
+}
+
+.outcome {
+  background-color: #eef6ff;
+  border-left: 4px solid #014735;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 15px;
+  color: #333;
+}
+
+.buttons {
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: 1px solid #014735;
+  border-radius: 20px;
+  background: #014735;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+}
 /* Services */
 .services {
   display: flex;
