@@ -1,7 +1,7 @@
 :root {
   --first: #0f1016;
   --second: #fff;
-  --third: #014735;
+  --third: #143264;
   --dark-grey: #666666;
   --medium-grey: #e6e0e0;
   --light-grey: #fafafa;
@@ -308,7 +308,6 @@ nav a {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: url(images/whitebackground.jpg);
 }
 
 .home-heading {
@@ -399,6 +398,7 @@ nav a {
   align-items: center;
   flex-direction: column;
   color: var(--first);
+  background-image: url(images/whitebackground.jpg);
 }
 
 .about-us h1 {
