@@ -112,11 +112,12 @@ body {
   height: 75px;
   position: fixed;
   z-index: 9999;
-  top: 60px;
+  top: 50px;
   background-color: var(--second);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
 }
 
 .logo-image {
