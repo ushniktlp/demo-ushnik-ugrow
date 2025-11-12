@@ -20,6 +20,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <style>
       .container {
         max-width: 1000px;
@@ -128,6 +129,21 @@
         background: #fff;
         color: #333;
         border: 1px solid #ccc;
+      }
+
+      .container {
+        display: flex;
+        gap: 40px;
+      }
+
+      .counter {
+        color: #333;
+      }
+
+      .label {
+        font-size: 18px;
+        color: #777;
+        margin-top: 8px;
       }
     </style>
   </head>
@@ -321,41 +337,35 @@
 
     <br />
 
-    <div class="statistics">
-      <div style="line-height: 1.2">
-        <h2>2300+K</h2>
-        <h2>Students Placed</h2>
+    <div class="container">
+      <div class="counter-box">
+        <h2 class="counter" id="counter1">0</h2>
+        <div class="label">Students Placed</div>
       </div>
 
-      <br />
-
-      <div style="line-height: 1.2">
-        <h2>600+K</h2>
-        <h2>Drives Happened</h2>
+      <div class="counter-box">
+        <h2 class="counter" id="counter2">0</h2>
+        <div class="label">Drives Happened</div>
       </div>
 
-      <br />
-
-      <div style="line-height: 1.2">
-        <h2>27 LPA</h2>
-        <h2>Highest Package</h2>
+      <div class="counter-box">
+        <h2 class="counter" id="counter3">0</h2>
+        <div class="label">Highest Package</div>
       </div>
 
-      <br />
-
-      <div style="line-height: 1.2">
-        <h2>3 LPA</h2>
-        <h2>Average Package</h2>
+      <div class="counter-box">
+        <h2 class="counter" id="counter4">0</h2>
+        <div class="label">Average Package</div>
       </div>
 
-      <div style="line-height: 1.2">
-        <h2>20+</h2>
-        <h2>Expert Mentors</h2>
+      <div class="counter-box">
+        <h2 class="counter" id="counter5">0</h2>
+        <div class="label">Expert Mentors</div>
       </div>
 
-      <div style="line-height: 1.2">
-        <h2>5000+</h2>
-        <h2>Learners Upskilled</h2>
+      <div class="counter-box">
+        <h2 class="counter" id="counter6">0</h2>
+        <div class="label">Learners Upskilled</div>
       </div>
     </div>
 
@@ -364,9 +374,11 @@
     <div class="courses-top">
       <div class="course-card">
         <img width="200px" height="150px" src="./images/uiux.jpg" alt="UI/UX" />
+        <br />
+        <br />
         <h3>UI/UX Developer</h3>
         <button>
-          <a style="color: white; text-decoration: none" href="uiux.html"
+          <a style="color: #143264; text-decoration: none" href="uiux.html"
             >Learn More</a
           >
         </button>
@@ -381,7 +393,7 @@
         />
         <h3>AI & Machine Learning Program</h3>
         <button>
-          <a style="color: white; text-decoration: none" href="aiml.html"
+          <a style="color: #143264; text-decoration: none" href="aiml.html"
             >Learn More</a
           >
         </button>
@@ -397,7 +409,7 @@
         <h3>Python Full Stack Developer</h3>
         <button>
           <a
-            style="color: white; text-decoration: none"
+            style="color: #143264; text-decoration: none"
             href="pythonfullstack.html"
             >Learn More</a
           >
@@ -411,9 +423,13 @@
           src="./images/pythonaiml.jpg"
           alt="Python for AI and ML"
         />
+        <br />
+        <br />
         <h3>Python for AI and ML</h3>
         <button>
-          <a style="color: white; text-decoration: none" href="pythonaiml.html"
+          <a
+            style="color: #143264; text-decoration: none"
+            href="pythonaiml.html"
             >Learn More</a
           >
         </button>
@@ -430,7 +446,7 @@
         />
         <h3>Advanced Mathematics for Machine Learning</h3>
         <button>
-          <a style="color: white; text-decoration: none" href="mathsml.html"
+          <a style="color: #143264; text-decoration: none" href="mathsml.html"
             >Learn More</a
           >
         </button>
@@ -440,7 +456,7 @@
         <img width="200px" height="150px" src="./images/mern.jpg" alt="MERN" />
         <h3>MERN Stack Developer Program</h3>
         <button>
-          <a style="color: white; text-decoration: none" href="mern.html"
+          <a style="color: #143264; text-decoration: none" href="mern.html"
             >Learn More</a
           >
         </button>
@@ -453,9 +469,11 @@
           src="./images/devops.jpg"
           alt="DevOps"
         />
+        <br />
+        <br />
         <h3>DevOps Program</h3>
         <button>
-          <a style="color: white; text-decoration: none" href="devops.html"
+          <a style="color: #143264; text-decoration: none" href="devops.html"
             >Learn More</a
           >
         </button>
