@@ -920,11 +920,18 @@ ul.topics {
   background-color: var(--dark-footer);
 }
 
-.social-links-footer {
+.social-logos-footer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+  list-style: none;
+  background-color: #ededed;
+}
+
+.social-logos-footer ul {
+  display: flex;
   gap: 30px;
   list-style: none;
 }
