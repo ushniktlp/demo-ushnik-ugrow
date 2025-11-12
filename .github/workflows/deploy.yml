@@ -1,0 +1,26 @@
+name: Deploy to VM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH into VM and pull latest code
+        uses: appleboy/ssh-action@v0.1.9
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.SSH_DEPLOY_KEY }}
+          port: 22
+          script: |
+            cd /var/www/html/ushnik.in
+            git reset --hard
+            git pull origin main
+            chown -R www-data:www-data /var/www/html/ushnik.in
+            find /var/www/html/ushnik.in -type d -exec chmod 755 {} \;
+            find /var/www/html/ushnik.in -type f -exec chmod 644 {} \;
