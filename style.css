@@ -112,7 +112,7 @@ body {
   height: 75px;
   position: fixed;
   z-index: 9999;
-  top: 50px;
+  top: 60px;
   background-color: var(--second);
   display: flex;
   justify-content: center;
@@ -330,6 +330,7 @@ nav a {
   width: 800px;
   font-size: 20px;
   line-height: 1.2;
+  text-align: left;
 }
 
 .home button {
