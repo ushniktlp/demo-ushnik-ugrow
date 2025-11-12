@@ -792,7 +792,7 @@ ul.topics {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  background-color: var(--second);
+  background-color: #ededed;
 }
 
 .logo-image {
