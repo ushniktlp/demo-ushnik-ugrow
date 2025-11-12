@@ -338,7 +338,7 @@ nav a {
   background-color: var(--fourth);
   border: none;
   border-radius: 40px;
-  color: var(--third);
+  color: var(--second);
   font-size: 20px;
   font-weight: 600;
   font-family: "Jost", sans-serif;
@@ -346,7 +346,7 @@ nav a {
 }
 
 .home button:hover {
-  background-color: var(--third);
+  background-color: var(--second);
   color: var(--fourth);
   cursor: pointer;
 }
