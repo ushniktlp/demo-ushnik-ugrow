@@ -20,7 +20,7 @@
     <!-- href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap" -->
     <link rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="other.css" />
     <style>
       .container {
         max-width: 1000px;
@@ -50,63 +50,74 @@
   </head>
   <body>
     <!-- Top Navigation Bar -->
-    <nav class="top-navbar">
-      <div class="contacts">
-        <p>
-          <a style="color: white" href="#">Hyderabad</a>
+    <nav class="top-navbar" role="banner" aria-label="Top information bar">
+      <div class="topbar-inner">
+        <!-- Left: Contacts -->
+        <div class="contacts" aria-label="Contact information">
+          <p>
+            <a href="#" class="contact-item">Hyderabad</a>
+            <span class="separator" aria-hidden="true">|</span>
+            <a href="tel:+917702901217" class="contact-item">+91 77029 01217</a>
+            <span class="separator" aria-hidden="true">|</span>
+            <a href="mailto:info@ushnik.in" class="contact-item"
+              >info@ushnik.in</a
+            >
+          </p>
+        </div>
 
-          <span class="separator">|</span>
-
-          <a style="color: white; width: 200px" href="#"> +917702901217 </a>
-
-          <span class="separator">|</span>
-
-          <a style="color: white" href="#">info@ushnik.in</a>
-        </p>
-      </div>
-
-      <div class="social-logos-header">
-        <ul>
-          <li>
-            <a href="#facebook">
-              <img
-                class="social-logo-footer"
-                src="images/facebook.png"
-                alt="facebook"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="#instagram">
-              <img
-                class="social-logo-footer"
-                src="images/instagram.png"
-                alt="instagram"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="#twitter">
-              <img
-                class="social-logo-footer"
-                src="images/twitter.png"
-                alt="twitter"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.linkedin.com/company/ushniktechnologies/">
-              <img
-                class="social-logo-footer"
-                src="images/linkedin.png"
-                alt="linkedin"
-              />
-            </a>
-          </li>
-        </ul>
+        <!-- Right: Social Icons -->
+        <div
+          class="social-logos-header"
+          role="navigation"
+          aria-label="Social links"
+        >
+          <ul>
+            <li>
+              <a href="#" aria-label="YouTube"
+                ><img
+                  class="social-icon"
+                  src="images/youtube.png"
+                  alt="YouTube"
+              /></a>
+            </li>
+            <li>
+              <a href="#facebook" aria-label="Facebook"
+                ><img
+                  class="social-icon"
+                  src="images/facebook.png"
+                  alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#instagram" aria-label="Instagram"
+                ><img
+                  class="social-icon"
+                  src="images/instagram.png"
+                  alt="Instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#whatsapp" aria-label="WhatsApp"
+                ><img
+                  class="social-icon"
+                  src="images/whatsapp.png"
+                  alt="WhatsApp"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/ushniktechnologies/"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="social-icon"
+                  src="images/linkedin.png"
+                  alt="LinkedIn"
+              /></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -114,34 +125,12 @@
     <nav class="main-navbar">
       <input type="checkbox" id="sidebar-active" />
       <a class="logo-link" href="#"
-        ><img class="logo-image" src="images/U_GROW.png" alt=""
+        ><img
+          style="width: 200px; height: 200px"
+          class="logo-image"
+          src="./images/U_GROW.png"
+          alt=""
       /></a>
-
-      <ul class="social-links-mobile">
-        <li>
-          <a href="#facebook" class="social-logo-mobile"
-            ><i class="fab fa-facebook"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#twitter" class="social-logo-mobile"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#linkedin" class="social-logo-mobile"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#instagram" class="social-logo-mobile"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </li>
-      </ul>
 
       <label for="sidebar-active" class="open-sidebar-button">
         <svg
@@ -159,6 +148,7 @@
       </label>
 
       <div class="links-container">
+        &nbsp;&nbsp;
         <div class="dropdown">
           <li class="nav-item">
             <a href="index.html" class="nav-link"
@@ -169,34 +159,10 @@
 
         <div class="dropdown">
           <li class="nav-item">
-            <a href="aboutus.html" class="nav-link"
-              >About Us<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-          <!-- <div class="dropdown-content">
-            <a href="#">Vision and Mission</a>
-            <a href="#">Our Philosophy</a>
-            <a href="#">Management Team</a>
-            <a href="#">Infrastructure</a>
-            <a href="#">Testimonials </a>
-          </div> -->
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
             <a href="allcourses.html" class="nav-link"
               >All Courses<i class="fa fa-angle-right"></i
             ></a>
           </li>
-          <!-- <div class="dropdown-content">
-            <a href="#">UI/UX Developer</a>
-            <a href="#">AIML</a>
-            <a href="#">PYthon Full Stack</a>
-            <a href="#">Python for AIML</a>
-            <a href="#">Maths for ML </a>
-            <a href="#">MERN Stack</a>
-            <a href="#">Devops</a>
-          </div> -->
         </div>
 
         <div class="dropdown">
@@ -209,29 +175,27 @@
 
         <div class="dropdown">
           <li class="nav-item">
-            <a href="blog.html" class="nav-link"
-              >Blog<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="faq.html" class="nav-link"
-              >FAQ<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link"
-              >Contact<i class="fa fa-angle-right"></i
+            <a href="resources.html" class="nav-link"
+              >Resources<i class="fa fa-angle-right"></i
             ></a>
           </li>
           <div class="dropdown-content">
-            <a href="#">Enquiry</a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
           </div>
+        </div>
+
+        <div class="dropdown">
+          <li class="nav-item">
+            <a href="placements.html" class="nav-link"
+              >Placements<i class="fa fa-angle-right"></i
+            ></a>
+          </li>
         </div>
       </div>
     </nav>

@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Mirrored from the97man.github.io/technology-website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 06:33:46 GMT -->
-  <!-- Added by HTTrack --><meta
-    http-equiv="content-type"
-    content="text/html;charset=utf-8"
-  /><!-- /Added by HTTrack -->
+  <!-- Added by HTTrack -->
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <!-- /Added by HTTrack -->
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ushnik Demo</title>
     <link rel="icon" type="image/png" href="./images/U_only_precise.png" />
 
-    <!-- href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" -->
-    <link rel="stylesheet" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
+    <!-- Your existing stylesheet links -->
+    <link rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-
-    <!-- href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap" -->
     <link rel="stylesheet" />
+    <link rel="stylesheet" href="home.css" />
 
-    <link rel="stylesheet" href="style.css" />
     <style>
       .container {
         width: 1300px;
@@ -39,11 +44,6 @@
         text-align: center;
       }
 
-      ul {
-        list-style-type: disc;
-        padding-left: 25px;
-      }
-
       p {
         margin: 10px 0 0;
       }
@@ -60,76 +60,84 @@
         border-color: #333;
       }
     </style>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Top Navigation Bar -->
-    <nav class="top-navbar">
-      <div class="contacts">
-        <p>
-          <a style="color: white" href="#">Hyderabad</a>
+    <nav class="top-navbar" role="banner" aria-label="Top information bar">
+      <div class="topbar-inner">
+        <!-- Left: Contacts -->
+        <div class="contacts" aria-label="Contact information">
+          <p>
+            <a href="#" class="contact-item">Hyderabad</a>
+            <span class="separator" aria-hidden="true">|</span>
+            <a href="tel:+917702901217" class="contact-item">+91 77029 01217</a>
+            <span class="separator" aria-hidden="true">|</span>
+            <a href="mailto:info@ushnik.in" class="contact-item"
+              >info@ushnik.in</a
+            >
+          </p>
+        </div>
 
-          <span class="separator">|</span>
-
-          <a style="color: white; width: 200px" href="#"> +917702901217 </a>
-
-          <span class="separator">|</span>
-
-          <a style="color: white" href="#">info@ushnik.in</a>
-        </p>
-      </div>
-
-      <div class="social-logos-header">
-        <ul>
-          <li>
-            <a href="#">
-              <img
-                class="social-logo-footer"
-                src="images/youtube.png"
-                alt="youtube"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="#facebook">
-              <img
-                class="social-logo-footer"
-                src="images/facebook.png"
-                alt="facebook"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="#instagram">
-              <img
-                class="social-logo-footer"
-                src="images/instagram.png"
-                alt="instagram"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="#whatsapp">
-              <img
-                class="social-logo-footer"
-                src="images/whatsapp.png"
-                alt="whatsapp"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.linkedin.com/company/ushniktechnologies/">
-              <img
-                class="social-logo-footer"
-                src="images/linkedin.png"
-                alt="linkedin"
-              />
-            </a>
-          </li>
-        </ul>
+        <!-- Right: Social Icons -->
+        <div
+          class="social-logos-header"
+          role="navigation"
+          aria-label="Social links"
+        >
+          <ul>
+            <li>
+              <a href="#" aria-label="YouTube"
+                ><img
+                  class="social-icon"
+                  src="images/youtube.png"
+                  alt="YouTube"
+              /></a>
+            </li>
+            <li>
+              <a href="#facebook" aria-label="Facebook"
+                ><img
+                  class="social-icon"
+                  src="images/facebook.png"
+                  alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#instagram" aria-label="Instagram"
+                ><img
+                  class="social-icon"
+                  src="images/instagram.png"
+                  alt="Instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#whatsapp" aria-label="WhatsApp"
+                ><img
+                  class="social-icon"
+                  src="images/whatsapp.png"
+                  alt="WhatsApp"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/ushniktechnologies/"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="social-icon"
+                  src="images/linkedin.png"
+                  alt="LinkedIn"
+              /></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -137,34 +145,12 @@
     <nav class="main-navbar">
       <input type="checkbox" id="sidebar-active" />
       <a class="logo-link" href="#"
-        ><img class="logo-image" src="./images/U_GROW.png" alt=""
+        ><img
+          style="width: 200px; height: 200px"
+          class="logo-image"
+          src="./images/U_GROW.png"
+          alt=""
       /></a>
-
-      <ul class="social-links-mobile">
-        <li>
-          <a href="#facebook" class="social-logo-mobile"
-            ><i class="fab fa-facebook"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#twitter" class="social-logo-mobile"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#linkedin" class="social-logo-mobile"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#instagram" class="social-logo-mobile"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </li>
-      </ul>
 
       <label for="sidebar-active" class="open-sidebar-button">
         <svg
@@ -182,6 +168,7 @@
       </label>
 
       <div class="links-container">
+        &nbsp;&nbsp;
         <div class="dropdown">
           <li class="nav-item">
             <a href="index.html" class="nav-link"
@@ -190,100 +177,57 @@
           </li>
         </div>
 
-        <!-- <div class="dropdown">
+        <div class="dropdown">
           <li class="nav-item">
-            <a href="aboutus.html" class="nav-link"
-              >About Us<i class="fa fa-angle-right"></i
-            ></a>
-          </li> -->
-        <!-- <div class="dropdown-content">
-            <a href="#">Vision and Mission</a>
-            <a href="#">Our Philosophy</a>
-            <a href="#">Management Team</a>
-            <a href="#">Infrastructure</a>
-            <a href="#">Testimonials </a>
-          </div> -->
-      </div>
-
-      <div class="dropdown">
-        <li class="nav-item">
-          <a href="allcourses.html" class="nav-link"
-            >All Courses<i class="fa fa-angle-right"></i
-          ></a>
-        </li>
-        <!-- <div class="dropdown-content">
-            <a href="#">UI/UX Developer</a>
-            <a href="#">AIML</a>
-            <a href="#">PYthon Full Stack</a>
-            <a href="#">Python for AIML</a>
-            <a href="#">Maths for ML </a>
-            <a href="#">MERN Stack</a>
-            <a href="#">Devops</a>
-          </div> -->
-      </div>
-
-      <div class="dropdown">
-        <li class="nav-item">
-          <a href="schedule.html" class="nav-link"
-            >Course Schedule<i class="fa fa-angle-right"></i
-          ></a>
-        </li>
-      </div>
-
-      <div class="dropdown">
-        <li class="nav-item">
-          <a href="resources.html" class="nav-link"
-            >Resources<i class="fa fa-angle-right"></i
-          ></a>
-        </li>
-        <div class="dropdown-content">
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <li class="nav-item">
-          <a href="placements.html" class="nav-link"
-            >Placements<i class="fa fa-angle-right"></i
-          ></a>
-        </li>
-      </div>
-
-      <!-- <div class="dropdown">
-          <li class="nav-item">
-            <a href="blog.html" class="nav-link"
-              >Blog<i class="fa fa-angle-right"></i
+            <a href="allcourses.html" class="nav-link"
+              >All Courses<i class="fa fa-angle-right"></i
             ></a>
           </li>
-        </div> -->
+        </div>
 
-      <!-- <div class="dropdown">
+        <div class="dropdown">
           <li class="nav-item">
-            <a href="faq.html" class="nav-link"
-              >FAQ<i class="fa fa-angle-right"></i
+            <a href="schedule.html" class="nav-link"
+              >Course Schedule<i class="fa fa-angle-right"></i
             ></a>
           </li>
-        </div> -->
-
-      <!-- <div class="dropdown">
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link"
-            >Contact<i class="fa fa-angle-right"></i
-          ></a>
-        </li>
-        <div class="dropdown-content">
-          <a href="#">Enquiry</a>
         </div>
-      </div> -->
+
+        <div class="dropdown">
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link"
+              >Resources<i class="fa fa-angle-right"></i
+            ></a>
+          </li>
+          <div class="dropdown-content">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <li class="nav-item">
+            <a href="placements.html" class="nav-link"
+              >Placements<i class="fa fa-angle-right"></i
+            ></a>
+          </li>
+        </div>
+      </div>
     </nav>
 
     <!-- Home -->
+    <div class="video-wrapper">
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="./280905_tiny.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
     <section id="home-section">
       <div class="home">
         <div class="home-heading">
@@ -296,157 +240,135 @@
                 >O</span
               >W
             </strong>
-
             <br />
-
-            <i>AI at Work, Innovation in Action.</i>
+            <i>• AI at Work, Innovation in Action.</i>
             <br />
-            Ushnik Global Readiness for Opportunities & Workforce From
+            Ushnik Global Readiness for Opportunities & Workforce From
             <a
               style="text-decoration: none; color: black"
               href="https://ushniktechnologies.com/"
               >Ushnik Technologies.</a
             >
-            <!-- Expert-driven programs in AI, ML, Full Stack Development, UI/UX,
-            DevOps, Data Science, and Cloud, crafted and delivered by
-            specialists from Ushnik Technologies Pvt. Ltd. Develop practical
-            expertise, build portfolio-ready real-world projects, and fast-track
-            your career with a globally relevant, industry-aligned curriculum
-            trusted by employers. -->
-            <br />
-            <br />
+            <br /><br />
           </p>
+
           <br />
 
           <div>
-            <button>Explore Programs</button>
+            <button class="primary-btn">Explore Programs</button>
             &nbsp;&nbsp;&nbsp;
-            <button>Enroll Now</button>
+            <button class="primary-btn">Enroll Now</button>
           </div>
         </div>
 
-        <div>
+        <div class="home-img-wrapper">
           <img src="./images/home.png" alt="Student" />
         </div>
       </div>
     </section>
 
     <section id="services-section">
-      <br />
-      <div class="services">
-        <div class="services-card">
-          <img
-            style="width: 100px"
-            src="images/experts.svg"
-            alt="Online Instructor"
-          />
-          <h2>Learn with Experts</h2>
-          <p style="padding-inline: 30px; text-align: center">
-            Train with certified instructors and experienced industry mentors.
-          </p>
-        </div>
+      <div class="services-wrapper">
+        <div class="services">
+          <div class="services-card">
+            <img src="images/experts.svg" alt="Online Instructor" />
+            <h2>Learn with Experts</h2>
+            <p>
+              Train with certified instructors and experienced industry mentors.
+            </p>
+          </div>
 
-        <div class="services-card">
-          <img style="width: 100px" src="images/anything.svg" alt="Content" />
-          <h2>Learn Anything</h2>
-          <p style="padding-inline: 50px; text-align: center">
-            From computer basics to advanced coding—one place, clear path.
-          </p>
-        </div>
+          <div class="services-card">
+            <img src="images/anything.svg" alt="Content" />
+            <h2>Learn Anything</h2>
+            <p>
+              From computer basics to advanced coding—one place, clear path.
+            </p>
+          </div>
 
-        <div class="services-card">
-          <img style="width: 100px" src="images/flexible.svg" alt="Classroom" />
-          <h2>Flexible Learning</h2>
-          <p style="padding-inline: 30px; text-align: center">
-            Weekend, evening, and online batches to fit your schedule.
-          </p>
-        </div>
+          <div class="services-card">
+            <img src="images/flexible.svg" alt="Classroom" />
+            <h2>Flexible Learning</h2>
+            <p>Weekend, evening, and online batches to fit your schedule.</p>
+          </div>
 
-        <div class="services-card">
-          <img style="width: 100px" src="images/standard.svg" alt="Classroom" />
-          <h2>Industrial Standard</h2>
-          <p style="padding-inline: 30px; text-align: center">
-            Curriculum aligned with industry tools and recognized
-            certifications.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- About US -->
-    <section id="about-us-section">
-      <div class="container">
-        <div style="display: flex; gap: 50px">
-          <a href="https://ushniktechnologies.com/"
-            ><img style="width: 520px" src="./images/about-us.jpg" alt="UGROW"
-          /></a>
-          <div>
-            <h1 style="text-align: center; line-height: 2">ABOUT US <br /></h1>
-
-            <p style="text-align: left">
-              U-GROW, an initiative of Ushnik Technologies Pvt. Ltd.,
-              specializes in transforming students, graduates, and working
-              professionals into industry-ready talent through guided training,
-              practical projects, and career-focused learning pathways. We don’t
-              teach theory—we teach application, implementation, and innovation.
-              <br />
-              <br />
-              Our mission is to enable professional growth for working
-              professionals, career switchers, and aspiring entrepreneurs by
-              making industry-relevant digital skills accessible to
-              non-technical learners and emerging innovators. We support
-              individuals returning from career gaps or transitioning into new
-              domains, empowering every learner with practical, future-ready
-              training to restart, reinvent, and accelerate their professional
-              journey with confidence.
+          <div class="services-card">
+            <img src="images/standard.svg" alt="Industrial Standard" />
+            <h2>Industrial Standard</h2>
+            <p>
+              Curriculum aligned with industry tools and recognized
+              certifications.
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- About US -->
+    <section id="about-us-section" class="about-us-section">
+      <div class="about-us container-grid">
+        <a href="https://ushniktechnologies.com/" class="about-image-link">
+          <img src="./images/about-us.jpg" alt="UGROW" class="about-image" />
+        </a>
+
+        <div class="about-content">
+          <h1>ABOUT US</h1>
+
+          <p>
+            U-GROW, an initiative of Ushnik Technologies Pvt. Ltd., specializes
+            in transforming students, graduates, and working professionals into
+            industry-ready talent through guided training, practical projects,
+            and career-focused learning pathways. We don’t teach theory—we teach
+            application, implementation, and innovation.
+            <br /><br />
+            Our mission is to enable professional growth for working
+            professionals, career switchers, and aspiring entrepreneurs by
+            making industry-relevant digital skills accessible to non-technical
+            learners and emerging innovators. We support individuals returning
+            from career gaps or transitioning into new domains, empowering every
+            learner with practical, future-ready training to restart, reinvent,
+            and accelerate their professional journey with confidence.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Services -->
     <section id="services-section">
-      <br />
-      <div class="services">
-        <div class="services-card">
-          <img
-            style="width: 100px"
-            src="images/online.png"
-            alt="Online Instructor"
-          />
-          <h2>Project Training</h2>
-          <p style="padding-inline: 30px; text-align: center">
-            Project Training – Learn from anywhere with an internet connection.
-            Our instructors conduct live classroom sessions that you can join
-            online in real time. The training includes interactive
-            demonstrations and hands-on lab exercises.
-          </p>
-        </div>
+      <div class="services-wrapper">
+        <div class="services">
+          <div class="services-card">
+            <img src="images/online.png" alt="Online Instructor" />
+            <h2>Project Training</h2>
+            <p>
+              Project Training – Learn from anywhere with an internet
+              connection. Our instructors conduct live classroom sessions that
+              you can join online in real time. The training includes
+              interactive demonstrations and hands-on lab exercises.
+            </p>
+          </div>
 
-        <div class="services-card">
-          <img style="width: 100px" src="images/content.png" alt="Content" />
-          <h2>Weekend Workshops</h2>
-          <p style="padding-inline: 50px; text-align: center">
-            Your team can receive training right at your company’s premises. The
-            course content is customized to meet your organization’s specific
-            needs. You choose the date and time, and we handle the rest.
-          </p>
-        </div>
+          <div class="services-card">
+            <img src="images/content.png" alt="Content" />
+            <h2>Weekend Workshops</h2>
+            <p>
+              Your team can receive training right at your company’s premises.
+              The course content is customized to meet your organization’s
+              specific needs. You choose the date and time, and we handle the
+              rest.
+            </p>
+          </div>
 
-        <div class="services-card">
-          <img
-            style="width: 100px"
-            src="images/classroom.png"
-            alt="Classroom"
-          />
-          <h2>Classroom Training</h2>
-          <p style="padding-inline: 30px; text-align: center">
-            We offer top-notch instructors with extensive industry experience
-            who ensure a deep understanding of each concept. Our
-            state-of-the-art lab facilities and comprehensive course materials
-            provide a practical, hands-on learning environment.
-          </p>
+          <div class="services-card">
+            <img src="images/classroom.png" alt="Classroom" />
+            <h2>Classroom Training</h2>
+            <p>
+              We offer top-notch instructors with extensive industry experience
+              who ensure a deep understanding of each concept. Our
+              state-of-the-art lab facilities and comprehensive course materials
+              provide a practical, hands-on learning environment.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -457,194 +379,134 @@
     <br />
 
     <!-- Footer -->
-    <footer>
-      <div class="footer-columns">
-        <div class="footer-column-1">
-          <a class="logo-footer" href="#"
-            ><img
-              style="width: 300px; height: 300px"
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="footer-inner">
+        <!-- Logo / Brand -->
+        <div class="footer-col footer-col-brand">
+          <a class="logo-footer" href="#" aria-label="U-GROW home">
+            <img
               class="logo-image"
               src="./images/U_GROW.png"
-              alt="UGROW"
-          /></a>
+              alt="U-GROW logo"
+            />
+          </a>
         </div>
 
-        <div class="mobile-columns">
-          <div class="footer-column-2">
-            <ul>
-              <li class="footer-heading">
-                <h3>Useful Links</h3>
-              </li>
-              <li class="footer-links-li">
-                <a href="">Home</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a href="">About Us</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a href="">Enroll Now</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a href="">Refer and Earn</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a style="cursor: none; color: white" href="">.</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a style="cursor: none; color: white" href="">.</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a style="cursor: none; color: white" href="">.</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a style="cursor: none; color: white" href="">.</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-column-3">
-            <ul>
-              <li class="footer-heading">
-                <h3>All Courses</h3>
-              </li>
-
-              <li class="footer-links-li">
-                <a href="uiux.html">UI/UX Developer</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a href="aiml.html">AI & Machine Learning Program</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a href="pythonfullstack.html">Python Full Stack Developer</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a href="pythonaiml.html">Python for AI and ML</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a href="mathsml.html"
-                  >Advanced Mathematics for Machine Learning</a
-                >
-              </li>
-
-              <li class="footer-links-li">
-                <a href="mern.html">MERN Stack Developer Program</a>
-              </li>
-
-              <li class="footer-links-li">
-                <a href="devops.html">DevOps Program </a>
-              </li>
-
-              <li class="footer-links-li">
-                <a style="cursor: none; color: white" href="">.</a>
-              </li>
-            </ul>
-          </div>
+        <!-- Useful Links -->
+        <div class="footer-col footer-col-links">
+          <h4 class="footer-heading">Useful Links</h4>
+          <ul class="footer-list">
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Enroll Now</a></li>
+            <li><a href="">Refer and Earn</a></li>
+          </ul>
         </div>
 
-        <div class="footer-column-4">
-          <ul>
-            <li class="footer-heading">
-              <h3>Contact Us</h3>
+        <!-- Courses -->
+        <div class="footer-col footer-col-courses">
+          <h4 class="footer-heading">All Courses</h4>
+          <ul class="footer-list">
+            <li><a href="uiux.html">UI/UX Developer</a></li>
+            <li><a href="aiml.html">AI &amp; Machine Learning Program</a></li>
+            <li>
+              <a href="pythonfullstack.html">Python Full Stack Developer</a>
             </li>
-            <li class="footer-links-li">
-              <a href="">info@ushnik.in</a>
+            <li><a href="pythonaiml.html">Python for AI and ML</a></li>
+            <li>
+              <a href="mathsml.html"
+                >Advanced Mathematics for Machine Learning</a
+              >
             </li>
+            <li><a href="mern.html">MERN Stack Developer Program</a></li>
+            <li><a href="devops.html">DevOps Program</a></li>
+          </ul>
+        </div>
 
-            <li class="footer-links-li">
-              <a href="">contact@ushniktechnologies.com</a>
+        <!-- Contact -->
+        <div class="footer-col footer-col-contact">
+          <h4 class="footer-heading">Contact Us</h4>
+          <ul class="footer-list contact-list">
+            <li><a href="mailto:info@ushnik.in">info@ushnik.in</a></li>
+            <li>
+              <a href="mailto:contact@ushniktechnologies.com"
+                >contact@ushniktechnologies.com</a
+              >
             </li>
-
-            <li class="footer-links-li">
-              <a href="">www.ushniktechnologies.com</a>
-            </li>
-
-            <li class="footer-links-li">
-              <a style="cursor: none; color: white" href="">.</a>
-            </li>
-
-            <li class="footer-links-li">
-              <a style="cursor: none; color: white" href="">.</a>
-            </li>
-
-            <li class="footer-links-li">
-              <a style="cursor: none; color: white" href="">.</a>
-            </li>
-
-            <li class="footer-links-li">
-              <a style="cursor: none; color: white" href="">.</a>
-            </li>
-
-            <li class="footer-links-li">
-              <a style="cursor: none; color: white" href="">.</a>
+            <li>
+              <a
+                href="https://ushniktechnologies.com/"
+                target="_blank"
+                rel="noopener"
+                >www.ushniktechnologies.com</a
+              >
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="social-logos-footer">
+      <!-- Social -->
+      <div class="footer-social" aria-label="Social links">
         <ul>
           <li>
-            <a href="#">
-              <img
+            <a href="#" aria-label="YouTube"
+              ><img
                 class="social-logo-footer"
                 src="images/youtube.png"
-                alt="youtube"
-              />
-            </a>
+                alt="YouTube"
+            /></a>
           </li>
-
           <li>
-            <a href="#facebook">
-              <img
+            <a href="#facebook" aria-label="Facebook"
+              ><img
                 class="social-logo-footer"
                 src="images/facebook.png"
-                alt="facebook"
-              />
-            </a>
+                alt="Facebook"
+            /></a>
           </li>
-
           <li>
-            <a href="#instagram">
-              <img
+            <a href="#instagram" aria-label="Instagram"
+              ><img
                 class="social-logo-footer"
                 src="images/instagram.png"
-                alt="instagram"
-              />
-            </a>
+                alt="Instagram"
+            /></a>
           </li>
-
           <li>
-            <a href="#twitter">
-              <img
+            <a href="#whatsapp" aria-label="WhatsApp"
+              ><img
                 class="social-logo-footer"
-                src="images/twitter.png"
-                alt="twitter"
-              />
-            </a>
+                src="images/whatsapp.png"
+                alt="WhatsApp"
+            /></a>
           </li>
-
           <li>
-            <a href="https://www.linkedin.com/company/ushniktechnologies/">
-              <img
+            <a
+              href="https://www.linkedin.com/company/ushniktechnologies/"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener"
+              ><img
                 class="social-logo-footer"
                 src="images/linkedin.png"
-                alt="linkedin"
-              />
-            </a>
+                alt="LinkedIn"
+            /></a>
           </li>
         </ul>
       </div>
+
+      <!-- Copyright / Bottom -->
+      <div class="footer-bottom">
+        <p class="copyright">
+          © <span id="current-year"></span> Ushnik Technologies Pvt. Ltd. — All
+          rights reserved.
+        </p>
+      </div>
     </footer>
+
+    <!-- <script>
+  // Set current year dynamically
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script> -->
   </body>
 </html>
