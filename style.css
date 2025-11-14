@@ -40,7 +40,7 @@ body {
 
 /* Theme vars (adjust to your project variables if available) */
 :root {
-  --topbar-bg: #fd5516; /* top bar background */
+  --topbar-bg: #143264; /* top bar background */
   --topbar-text: #ffffff; /* text on topbar */
   --topbar-height-lg: 56px; /* desktop / laptop */
   --topbar-height-md: 56px; /* tablet (iPad) */
@@ -69,6 +69,7 @@ body {
 /* Inner container */
 .topbar-inner {
   max-width: var(--max-width);
+  height: 50px;
   margin: 0 auto;
   padding: 6px 20px;
   display: flex;
@@ -542,7 +543,7 @@ nav a {
   width: 200px;
   height: 350px;
   background-color: var(--second);
-  border-left: 5px solid #fd5516;
+  border-left: 5px solid #143264;
   border-radius: 30px;
   color: #fd5516;
   text-align: center;
@@ -1208,6 +1209,8 @@ nav a {
 
 .footer-social ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 18px;
   padding: 0;
   margin: 0;
