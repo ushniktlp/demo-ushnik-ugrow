@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link rel="stylesheet" />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <style>
       .container {
@@ -58,6 +58,93 @@
         border-bottom: 0;
         margin: 25px auto;
         border-color: #333;
+      }
+
+      @media (max-width: 600px) {
+        .logo-link {
+          margin: 0;
+          padding-left: 10px;
+        }
+
+        .logo-image {
+          width: 80px;
+        }
+
+        .links-container {
+          width: 250px;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          position: fixed;
+          top: 0;
+          left: -100%;
+          z-index: 10;
+          background-color: var(--second);
+          transition: 0.75s ease-out;
+        }
+
+        .social-links-desktop {
+          display: none;
+        }
+
+        .social-links-mobile {
+          display: flex;
+          list-style: none;
+        }
+
+        .social-logo-mobile {
+          padding: 10px;
+        }
+
+        nav a {
+          width: 100%;
+          justify-content: flex-start;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+
+        .nav-link {
+          width: 180px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 20px;
+          font-weight: 500;
+          list-style: none;
+          box-sizing: border-box;
+          border: 1px solid var(--medium-grey);
+          color: var(--first);
+          transition: var(--transition);
+          padding-left: 20px;
+        }
+
+        .nav-link i {
+          display: block;
+        }
+
+        .open-sidebar-button {
+          display: flex;
+          padding-right: 10px;
+        }
+
+        #sidebar-active:checked ~ .links-container {
+          left: 0;
+        }
+      }
+
+      /* Very small phones */
+      @media (max-width: 420px) {
+        .social-icon {
+          width: 16px;
+        }
+        .topbar-inner {
+          padding: 6px 10px;
+        }
+
+        .schedule {
+          width: 250px;
+          padding: none;
+        }
       }
     </style>
 

@@ -1,211 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Mirrored from the97man.github.io/technology-website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 06:33:46 GMT -->
-  <!-- Added by HTTrack --><meta
-    http-equiv="content-type"
-    content="text/html;charset=utf-8"
-  /><!-- /Added by HTTrack -->
+  <!-- Added by HTTrack -->
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <!-- /Added by HTTrack -->
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Technology Website - Home Page 1</title>
+    <title>Ushnik Demo</title>
+    <link rel="icon" type="image/png" href="./images/U_only_precise.png" />
+
+    <!-- Bootstrap 5 CSS -->
     <link
-      href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
+
+    <!-- Your existing stylesheet links -->
+    <link rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+
     <style>
-      .statistics {
-        max-width: 1000px;
+      .container {
+        width: 1300px;
         margin: 50px auto;
         padding: 20px;
         background: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background-image: url(images/whitebackground.jpg);
       }
 
-      ul {
-        list-style-type: disc;
-        padding-left: 25px;
+      .container h2 {
+        color: #143264;
+        padding-left: 10px;
+        margin-top: 40px;
+        text-align: center;
       }
 
       p {
         margin: 10px 0 0;
       }
 
-      .statistics {
-        max-width: 1000px;
-        margin: 0 auto;
+      .feature-divider {
+        border: solid 3px;
+        display: block;
+        width: 110px;
+        height: 1px;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 0;
+        margin: 25px auto;
+        border-color: #333;
       }
 
-      .card {
-        display: flex;
-        background: #fff;
-        padding: 16px;
-        gap: 16px;
+      @media (max-width: 600px) {
+        .logo-link {
+          margin: 0;
+          padding-left: 10px;
+        }
+
+        .logo-image {
+          width: 80px;
+        }
+
+        .links-container {
+          width: 250px;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          position: fixed;
+          top: 0;
+          left: -100%;
+          z-index: 10;
+          background-color: var(--second);
+          transition: 0.75s ease-out;
+        }
+
+        .social-links-desktop {
+          display: none;
+        }
+
+        .social-links-mobile {
+          display: flex;
+          list-style: none;
+        }
+
+        .social-logo-mobile {
+          padding: 10px;
+        }
+
+        nav a {
+          width: 100%;
+          justify-content: flex-start;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+
+        .nav-link {
+          width: 180px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 20px;
+          font-weight: 500;
+          list-style: none;
+          box-sizing: border-box;
+          border: 1px solid var(--medium-grey);
+          color: var(--first);
+          transition: var(--transition);
+          padding-left: 20px;
+        }
+
+        .nav-link i {
+          display: block;
+        }
+
+        .open-sidebar-button {
+          display: flex;
+          padding-right: 10px;
+        }
+
+        #sidebar-active:checked ~ .links-container {
+          left: 0;
+        }
       }
 
-      .logo {
-        font-weight: bold;
-        color: #143264;
-        margin-bottom: 8px;
+      /* Very small phones */
+      @media (max-width: 420px) {
+        .social-icon {
+          width: 16px;
+        }
+        .topbar-inner {
+          padding: 6px 10px;
+        }
+
+        .schedule {
+          width: 250px;
+          padding: none;
+        }
       }
 
-      .badge {
-        display: inline-block;
-        padding: 6px 8px;
-        border: 1px solid #e6f0ff;
-        background: #f8fbff;
-        font-size: 12px;
-        color: #014735;
-        margin-bottom: 8px;
-      }
+      /* Very small phones */
+      @media (max-width: 420px) {
+        .statistics {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 50px;
+          text-align: center;
+        }
 
-      h1 {
-        margin: 0 0 6px 0;
-        font-size: 22px;
-      }
+        .courses-top {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 30px;
+        }
 
-      .subtitle {
-        color: #666;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
+        .courses-bottom {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 30px;
+          padding-top: 30px;
+        }
 
-      .chips {
-        margin: 10px 0;
-      }
+        .course-card {
+          width: 200px;
+          height: 350px;
+          background-color: var(--second);
+          border-left: 5px solid var(--third);
+          border-radius: 30px;
+          color: var(--third);
+          text-align: center;
+        }
 
-      .chip {
-        display: inline-block;
-        padding: 6px 8px;
-        margin: 4px 4px 0 0;
-        border: 1px solid #e0e7ff;
-        background: #fbfdff;
-        font-size: 13px;
-        color: #014735;
-      }
+        .course-card img {
+          border-top-left-radius: 30px;
+          border-top-right-radius: 30px;
+        }
 
-      .section {
-        margin-top: 12px;
-      }
+        .course-card h3 {
+          padding-top: 30px;
+        }
 
-      ul.topics {
-        margin: 6px 0 0 18px;
-        color: #333;
-      }
-
-      .outcome {
-        background-color: #eef6ff;
-        border-left: 4px solid #014735;
-        padding: 10px;
-        border-radius: 6px;
-        margin-top: 15px;
-        color: #333;
-      }
-
-      .buttons {
-        margin-top: 12px;
-      }
-
-      .btn {
-        padding: 8px 12px;
-        border: 1px solid #143264;
-        background: #143264;
-        color: #fff;
-        cursor: pointer;
-        font-weight: bold;
-        margin-right: 8px;
-      }
-
-      .btn-secondary {
-        background: #fff;
-        color: #333;
-        border: 1px solid #ccc;
-      }
-
-      .statistics {
-        display: flex;
-        gap: 40px;
-      }
-
-      .counter {
-        color: #333;
-      }
-
-      .label {
-        font-size: 18px;
-        color: #777;
-        margin-top: 8px;
+        .course-card button {
+          width: 100px;
+          height: 30px;
+          border-radius: 20px;
+          background-color: var(--third);
+          color: var(--third);
+        }
       }
     </style>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Top Navigation Bar -->
-    <nav class="top-navbar">
-      <div class="contacts">
-        <p>
-          <a style="color: white" href="#">Hyderabad</a>
+    <nav class="top-navbar" role="banner" aria-label="Top information bar">
+      <div class="topbar-inner">
+        <!-- Left: Contacts -->
+        <div class="contacts" aria-label="Contact information">
+          <p>
+            <a href="#" class="contact-item">Hyderabad</a>
+            <span class="separator" aria-hidden="true">|</span>
+            <a href="tel:+917702901217" class="contact-item">+91 77029 01217</a>
+            <span class="separator" aria-hidden="true">|</span>
+            <a href="mailto:info@ushnik.in" class="contact-item"
+              >info@ushnik.in</a
+            >
+          </p>
+        </div>
 
-          <span class="separator">|</span>
-
-          <a style="color: white; width: 200px" href="#"> +917702901217 </a>
-
-          <span class="separator">|</span>
-
-          <a style="color: white" href="#">info@ushnik.in</a>
-        </p>
-      </div>
-
-      <div class="social-logos-header">
-        <ul>
-          <li>
-            <a href="#facebook">
-              <img
-                class="social-logo-footer"
-                src="images/facebook.png"
-                alt="facebook"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="#instagram">
-              <img
-                class="social-logo-footer"
-                src="images/instagram.png"
-                alt="instagram"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="#twitter">
-              <img
-                class="social-logo-footer"
-                src="images/twitter.png"
-                alt="twitter"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.linkedin.com/company/ushniktechnologies/">
-              <img
-                class="social-logo-footer"
-                src="images/linkedin.png"
-                alt="linkedin"
-              />
-            </a>
-          </li>
-        </ul>
+        <!-- Right: Social Icons -->
+        <div
+          class="social-logos-header"
+          role="navigation"
+          aria-label="Social links"
+        >
+          <ul>
+            <li>
+              <a href="#" aria-label="YouTube"
+                ><img
+                  class="social-icon"
+                  src="images/youtube.png"
+                  alt="YouTube"
+              /></a>
+            </li>
+            <li>
+              <a href="#facebook" aria-label="Facebook"
+                ><img
+                  class="social-icon"
+                  src="images/facebook.png"
+                  alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#instagram" aria-label="Instagram"
+                ><img
+                  class="social-icon"
+                  src="images/instagram.png"
+                  alt="Instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#whatsapp" aria-label="WhatsApp"
+                ><img
+                  class="social-icon"
+                  src="images/whatsapp.png"
+                  alt="WhatsApp"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/ushniktechnologies/"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="social-icon"
+                  src="images/linkedin.png"
+                  alt="LinkedIn"
+              /></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -213,34 +289,12 @@
     <nav class="main-navbar">
       <input type="checkbox" id="sidebar-active" />
       <a class="logo-link" href="#"
-        ><img class="logo-image" src="images/U_GROW.png" alt=""
+        ><img
+          style="width: 200px; height: 200px"
+          class="logo-image"
+          src="./images/U_GROW.png"
+          alt=""
       /></a>
-
-      <ul class="social-links-mobile">
-        <li>
-          <a href="#facebook" class="social-logo-mobile"
-            ><i class="fab fa-facebook"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#twitter" class="social-logo-mobile"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#linkedin" class="social-logo-mobile"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#instagram" class="social-logo-mobile"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </li>
-      </ul>
 
       <label for="sidebar-active" class="open-sidebar-button">
         <svg
@@ -258,6 +312,7 @@
       </label>
 
       <div class="links-container">
+        &nbsp;&nbsp;
         <div class="dropdown">
           <li class="nav-item">
             <a href="index.html" class="nav-link"
@@ -268,34 +323,10 @@
 
         <div class="dropdown">
           <li class="nav-item">
-            <a href="aboutus.html" class="nav-link"
-              >About Us<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-          <!-- <div class="dropdown-content">
-            <a href="#">Vision and Mission</a>
-            <a href="#">Our Philosophy</a>
-            <a href="#">Management Team</a>
-            <a href="#">Infrastructure</a>
-            <a href="#">Testimonials </a>
-          </div> -->
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
             <a href="allcourses.html" class="nav-link"
               >All Courses<i class="fa fa-angle-right"></i
             ></a>
           </li>
-          <!-- <div class="dropdown-content">
-            <a href="#">UI/UX Developer</a>
-            <a href="#">AIML</a>
-            <a href="#">PYthon Full Stack</a>
-            <a href="#">Python for AIML</a>
-            <a href="#">Maths for ML </a>
-            <a href="#">MERN Stack</a>
-            <a href="#">Devops</a>
-          </div> -->
         </div>
 
         <div class="dropdown">
@@ -308,33 +339,34 @@
 
         <div class="dropdown">
           <li class="nav-item">
-            <a href="blog.html" class="nav-link"
-              >Blog<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="faq.html" class="nav-link"
-              >FAQ<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link"
-              >Contact<i class="fa fa-angle-right"></i
+            <a href="resources.html" class="nav-link"
+              >Resources<i class="fa fa-angle-right"></i
             ></a>
           </li>
           <div class="dropdown-content">
-            <a href="#">Enquiry</a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
           </div>
+        </div>
+
+        <div class="dropdown">
+          <li class="nav-item">
+            <a href="placements.html" class="nav-link"
+              >Placements<i class="fa fa-angle-right"></i
+            ></a>
+          </li>
         </div>
       </div>
     </nav>
 
+    <br />
+    <br />
+    <br />
     <br />
 
     <div class="statistics">
@@ -369,336 +401,83 @@
       </div>
     </div>
 
-    <br />
-
     <div class="courses-top">
       <div class="course-card">
-        <img width="200px" height="150px" src="./images/uiux.jpg" alt="UI/UX" />
-        <br />
-        <br />
-        <h3>UI/UX Developer</h3>
+        <img src="./images/uiux.jpg" alt="UI/UX Developer" />
+        <h4>
+          UI/UX <br />
+          Developer
+        </h4>
         <button>
-          <a style="color: #143264; text-decoration: none" href="uiux.html"
-            >Learn More</a
-          >
+          <a href="uiux.html">Learn More</a>
+        </button>
+      </div>
+
+      <div class="course-card">
+        <img src="./images/aiml.jpg" alt="AI & ML Program" />
+        <h4>
+          AI & ML <br />
+          Program
+        </h4>
+        <button>
+          <a href="aiml.html">Learn More</a>
         </button>
       </div>
 
       <div class="course-card">
         <img
-          width="200px"
-          height="150px"
-          src="./images/aiml.jpg"
-          alt="AI and Machine Learning"
-        />
-        <h3>AI & Machine Learning Program</h3>
-        <button>
-          <a style="color: #143264; text-decoration: none" href="aiml.html"
-            >Learn More</a
-          >
-        </button>
-      </div>
-
-      <div class="course-card">
-        <img
-          width="200px"
-          height="150px"
           src="./images/pythondevops.jpg"
-          alt="Python Full Stack"
+          alt="Python Full Stack Developer"
         />
-        <h3>Python Full Stack Developer</h3>
+        <h4>Python Full Stack Developer</h4>
         <button>
-          <a
-            style="color: #143264; text-decoration: none"
-            href="pythonfullstack.html"
-            >Learn More</a
-          >
+          <a href="pythonfullstack.html">Learn More</a>
         </button>
       </div>
 
       <div class="course-card">
-        <img
-          width="200px"
-          height="150px"
-          src="./images/pythonaiml.jpg"
-          alt="Python for AI and ML"
-        />
-        <br />
-        <br />
-        <h3>Python for AI and ML</h3>
+        <img src="./images/pythonaiml.jpg" alt="Python for AI & ML" />
+        <h4>
+          Python for <br />
+          AI & ML
+        </h4>
         <button>
-          <a
-            style="color: #143264; text-decoration: none"
-            href="pythonaiml.html"
-            >Learn More</a
-          >
+          <a href="pythonaiml.html">Learn More</a>
         </button>
       </div>
     </div>
+
+    <br />
+    <br />
 
     <div class="courses-bottom">
       <div class="course-card">
-        <img
-          width="200px"
-          height="150px"
-          src="./images/mathsml.jpg"
-          alt="Maths for ML"
-        />
-        <h3>Advanced Mathematics for Machine Learning</h3>
+        <img src="./images/mathsml.jpg" alt="Adv. Math for ML" />
+        <h4>Advanced Math for ML</h4>
         <button>
-          <a style="color: #143264; text-decoration: none" href="mathsml.html"
-            >Learn More</a
-          >
+          <a href="mathsml.html">Learn More</a>
         </button>
       </div>
 
       <div class="course-card">
-        <img width="200px" height="150px" src="./images/mern.jpg" alt="MERN" />
-        <h3>MERN Stack Developer Program</h3>
+        <img src="./images/mern.jpg" alt="MERN Stack Developer" />
+        <h4>MERN Stack Developer</h4>
         <button>
-          <a style="color: #143264; text-decoration: none" href="mern.html"
-            >Learn More</a
-          >
+          <a href="mern.html">Learn More</a>
         </button>
       </div>
 
       <div class="course-card">
-        <img
-          width="200px"
-          height="150px"
-          src="./images/devops.jpg"
-          alt="DevOps"
-        />
-        <br />
-        <br />
-        <h3>DevOps Program</h3>
+        <img src="./images/devops.jpg" alt="DevOps" />
+        <h4>
+          DevOps <br />
+          Program
+        </h4>
         <button>
-          <a style="color: #143264; text-decoration: none" href="devops.html"
-            >Learn More</a
-          >
+          <a href="devops.html">Learn More</a>
         </button>
       </div>
     </div>
-
-    <!-- <div class="container">
-      <div class="card">
-        <div>
-          <h1>UI/UX Developer Course</h1>
-          <div class="subtitle">
-            A complete design-centric program covering user research,
-            prototyping, wireframes, interaction design, usability principles,
-            and hands-on Figma projects.
-          </div>
-          <strong>Key Skills:</strong>
-          <div class="chips">
-            <span class="chip">Figma</span>
-            <span class="chip">Prototyping</span>
-            <span class="chip">Design Thinking</span>
-            <span class="chip">User Journeys</span>
-            <span class="chip">Color Theory</span>
-            <span class="chip">UI Components</span>
-            <span class="chip">Mobile/Web layouts</span>
-          </div>
-
-          <div class="outcome">
-            <strong>Outcome:</strong> Portfolio + 3 Complete UI/UX Projects.
-          </div>
-
-          <div class="buttons">
-            <button class="btn">Enroll Now</button>
-            <button class="btn btn-secondary">View Curriculum</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div class="container">
-      <div class="card">
-        <div>
-          <h1>AI & Machine Learning Program</h1>
-          <div class="subtitle">
-            A structured course covering Python foundations, ML algorithms,
-            model tuning, real-world datasets, and AI automation.
-          </div>
-          <strong>Key Skills:</strong>
-          <div class="chips">
-            <span class="chip">Regression</span>
-            <span class="chip">Classification</span>
-            <span class="chip">CNNs</span>
-            <span class="chip">NLP</span>
-            <span class="chip">Reinforcement Learning,</span>
-            <span class="chip">MLOps basics.</span>
-          </div>
-
-          <div class="outcome">
-            <strong>Outcome:</strong> 3 ML Projects + 1 Capstone.
-          </div>
-
-          <div class="buttons">
-            <button class="btn">Enroll Now</button>
-            <button class="btn btn-secondary">View Curriculum</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div class="container">
-      <div class="card">
-        <div>
-          <h1>Python Full Stack Developer</h1>
-          <div class="subtitle">
-            Frontend + Backend + Database + Deployment.
-          </div>
-          <strong> Technologies Covered:</strong>
-          <div class="chips">
-            <span class="chip">Python</span>
-            <span class="chip">Django/Flask</span>
-            <span class="chip">HTML/CSS/JS</span>
-            <span class="chip">APIs</span>
-            <span class="chip">SQL/NoSQL</span>
-            <span class="chip">Cloud Deployment</span>
-          </div>
-
-          <div class="outcome">
-            <strong>Outcome:</strong> Complete production-ready web application.
-          </div>
-
-          <div class="buttons">
-            <button class="btn">Enroll Now</button>
-            <button class="btn btn-secondary">View Curriculum</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div class="container">
-      <div class="card">
-        <div>
-          <h1>Python for AI & ML</h1>
-          <div class="subtitle">
-            A course for those who want to strengthen Python exclusively for
-            data science and AI.
-          </div>
-          <strong>Modules:</strong>
-          <div class="chips">
-            <span class="chip">NumPy</span>
-            <span class="chip">Pandas</span>
-            <span class="chip">Matplotlib</span>
-            <span class="chip">Exploratory Data Analysis</span>
-            <span class="chip">Handling Datasets</span>
-            <span class="chip">Feature Engineering</span>
-          </div>
-
-          <div class="buttons">
-            <button class="btn">Enroll Now</button>
-            <button class="btn btn-secondary">View Curriculum</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div class="container">
-      <div class="card">
-        <div>
-          <h1>Advanced Mathematics for Machine Learning</h1>
-          <div class="subtitle">(Enhanced + SEO Optimized)</div>
-
-          <div class="section">
-            <strong>Course Description:</strong>
-            <p>
-              A dedicated math foundation program built to help learners
-              understand the mathematical backbone of AI and Machine Learning.
-              The course simplifies complex concepts with visual explanations,
-              real-time examples, and step-by-step problem solving.
-            </p>
-          </div>
-
-          <div class="section">
-            <strong>Topics Covered:</strong>
-            <ul class="topics">
-              <li>
-                Linear Algebra: vectors, matrices, eigenvalues, eigenvectors
-              </li>
-              <li>
-                Probability &amp; Statistics: distributions, Bayes theorem,
-                conditional probability
-              </li>
-              <li>Calculus for ML: derivatives, gradients, optimization</li>
-              <li>Gradient Descent &amp; Loss Functions</li>
-              <li>Matrix Decompositions (SVD, PCA math)</li>
-              <li>Mathematical modeling with real datasets</li>
-            </ul>
-          </div>
-
-          <div class="outcome">
-            <strong>Outcome:</strong> ML-ready mathematical foundation.
-          </div>
-
-          <div class="buttons">
-            <button class="btn">Enroll Now</button>
-            <button class="btn btn-secondary">View Curriculum</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div class="container">
-      <div class="card">
-        <div>
-          <h1>MERN Stack Developer Program</h1>
-          <div class="subtitle">
-            Complete JavaScript-based full-stack development.
-          </div>
-          <strong>Technologies:</strong>
-          <div class="chips">
-            <span class="chip">MongoDB</span>
-            <span class="chip">Express.js</span>
-            <span class="chip">React.js</span>
-            <span class="chip">Node.js</span>
-          </div>
-
-          <div class="outcome">
-            <strong>Outcome:</strong> A full-featured web application +
-            Deployment.
-          </div>
-
-          <div class="buttons">
-            <button class="btn">Enroll Now</button>
-            <button class="btn btn-secondary">View Curriculum</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div class="container">
-      <div class="card">
-        <div>
-          <h1>DevOps Program</h1>
-          <div class="subtitle">
-            End-to-end training on automation, CI/CD, cloud workflow, and
-            infrastructure deployment.
-          </div>
-          <strong>Tools Covered:</strong>
-          <div class="chips">
-            <span class="chip">Git</span>
-            <span class="chip">Docker</span>
-            <span class="chip">Kubernetes</span>
-            <span class="chip">Jenkins</span>
-            <span class="chip">Terraform</span>
-            <span class="chip">AWS/Azure basics</span>
-          </div>
-
-          <div class="outcome">
-            <strong>Outcome:</strong> Hands-on DevOps pipelines + cloud
-            deployment.
-          </div>
-
-          <div class="buttons">
-            <button class="btn">Enroll Now</button>
-            <button class="btn btn-secondary">View Curriculum</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
+    <br />
   </body>
 </html>

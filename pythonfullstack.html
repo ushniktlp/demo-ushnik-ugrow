@@ -1,85 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Mirrored from the97man.github.io/technology-website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 06:33:46 GMT -->
-  <!-- Added by HTTrack --><meta
-    http-equiv="content-type"
-    content="text/html;charset=utf-8"
-  /><!-- /Added by HTTrack -->
+  <!-- Added by HTTrack -->
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <!-- /Added by HTTrack -->
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ushnik Demo</title>
     <link rel="icon" type="image/png" href="./images/U_only_precise.png" />
 
-    <!-- href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" -->
-    <link rel="stylesheet" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
+    <!-- Your existing stylesheet links -->
+    <link rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-
-    <!-- href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap" -->
     <link rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .container {
+        width: 1300px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background-image: url(images/whitebackground.jpg);
+      }
+
+      .container h2 {
+        color: #143264;
+        padding-left: 10px;
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      p {
+        margin: 10px 0 0;
+      }
+
+      .feature-divider {
+        border: solid 3px;
+        display: block;
+        width: 110px;
+        height: 1px;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 0;
+        margin: 25px auto;
+        border-color: #333;
+      }
+
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+
+      @media (max-width: 600px) {
+        .logo-link {
+          margin: 0;
+          padding-left: 10px;
+        }
+
+        .logo-image {
+          width: 80px;
+        }
+
+        .links-container {
+          width: 250px;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          position: fixed;
+          top: 0;
+          left: -100%;
+          z-index: 10;
+          background-color: var(--second);
+          transition: 0.75s ease-out;
+        }
+
+        .social-links-desktop {
+          display: none;
+        }
+
+        .social-links-mobile {
+          display: flex;
+          list-style: none;
+        }
+
+        .social-logo-mobile {
+          padding: 10px;
+        }
+
+        nav a {
+          width: 100%;
+          justify-content: flex-start;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+
+        .nav-link {
+          width: 180px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 20px;
+          font-weight: 500;
+          list-style: none;
+          box-sizing: border-box;
+          border: 1px solid var(--medium-grey);
+          color: var(--first);
+          transition: var(--transition);
+          padding-left: 20px;
+        }
+
+        .nav-link i {
+          display: block;
+        }
+
+        .open-sidebar-button {
+          display: flex;
+          padding-right: 10px;
+        }
+
+        #sidebar-active:checked ~ .links-container {
+          left: 0;
+        }
+      }
+
+      /* Very small phones */
+      @media (max-width: 420px) {
+        .social-icon {
+          width: 16px;
+        }
+        .topbar-inner {
+          padding: 6px 10px;
+        }
+
+        .schedule {
+          width: 250px;
+          padding: none;
+        }
+
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td,
+        th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+
+        .logo-link {
+          margin: 0;
+          padding-left: 10px;
+        }
+
+        .logo-image {
+          width: 80px;
+        }
+
+        .links-container {
+          width: 250px;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          position: fixed;
+          top: 0;
+          left: -100%;
+          z-index: 10;
+          background-color: var(--second);
+          transition: 0.75s ease-out;
+        }
+
+        .social-links-desktop {
+          display: none;
+        }
+
+        .social-links-mobile {
+          display: flex;
+          list-style: none;
+        }
+
+        .social-logo-mobile {
+          padding: 10px;
+        }
+
+        nav a {
+          width: 100%;
+          justify-content: flex-start;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+
+        .nav-link {
+          width: 180px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 20px;
+          font-weight: 500;
+          list-style: none;
+          box-sizing: border-box;
+          border: 1px solid var(--medium-grey);
+          color: var(--first);
+          transition: var(--transition);
+          padding-left: 20px;
+        }
+
+        .nav-link i {
+          display: block;
+        }
+
+        .open-sidebar-button {
+          display: flex;
+          padding-right: 10px;
+        }
+
+        #sidebar-active:checked ~ .links-container {
+          left: 0;
+        }
+      }
+    </style>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Top Navigation Bar -->
-    <nav class="top-navbar">
-      <div class="contacts">
-        <p>
-          <a style="color: white" href="#">Hyderabad</a>
+    <nav class="top-navbar" role="banner" aria-label="Top information bar">
+      <div class="topbar-inner">
+        <!-- Left: Contacts -->
+        <div class="contacts" aria-label="Contact information">
+          <p>
+            <a href="#" class="contact-item">Hyderabad</a>
+            <span class="separator" aria-hidden="true">|</span>
+            <a href="tel:+917702901217" class="contact-item">+91 77029 01217</a>
+            <span class="separator" aria-hidden="true">|</span>
+            <a href="mailto:info@ushnik.in" class="contact-item"
+              >info@ushnik.in</a
+            >
+          </p>
+        </div>
 
-          <span class="separator">|</span>
-
-          <a style="color: white; width: 200px" href="#"> +917702901217 </a>
-
-          <span class="separator">|</span>
-
-          <a style="color: white" href="#">info@ushnik.in</a>
-        </p>
-      </div>
-
-      <div class="social-logos-header">
-        <ul>
-          <li>
-            <a href="#facebook">
-              <img
-                class="social-logo-footer"
-                src="images/facebook.png"
-                alt="facebook"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="#instagram">
-              <img
-                class="social-logo-footer"
-                src="images/instagram.png"
-                alt="instagram"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="#twitter">
-              <img
-                class="social-logo-footer"
-                src="images/twitter.png"
-                alt="twitter"
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.linkedin.com/company/ushniktechnologies/">
-              <img
-                class="social-logo-footer"
-                src="images/linkedin.png"
-                alt="linkedin"
-              />
-            </a>
-          </li>
-        </ul>
+        <!-- Right: Social Icons -->
+        <div
+          class="social-logos-header"
+          role="navigation"
+          aria-label="Social links"
+        >
+          <ul>
+            <li>
+              <a href="#" aria-label="YouTube"
+                ><img
+                  class="social-icon"
+                  src="images/youtube.png"
+                  alt="YouTube"
+              /></a>
+            </li>
+            <li>
+              <a href="#facebook" aria-label="Facebook"
+                ><img
+                  class="social-icon"
+                  src="images/facebook.png"
+                  alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#instagram" aria-label="Instagram"
+                ><img
+                  class="social-icon"
+                  src="images/instagram.png"
+                  alt="Instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#whatsapp" aria-label="WhatsApp"
+                ><img
+                  class="social-icon"
+                  src="images/whatsapp.png"
+                  alt="WhatsApp"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/ushniktechnologies/"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="social-icon"
+                  src="images/linkedin.png"
+                  alt="LinkedIn"
+              /></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -87,34 +336,12 @@
     <nav class="main-navbar">
       <input type="checkbox" id="sidebar-active" />
       <a class="logo-link" href="#"
-        ><img class="logo-image" src="images/U_GROW.png" alt=""
+        ><img
+          style="width: 200px; height: 200px"
+          class="logo-image"
+          src="./images/U_GROW.png"
+          alt=""
       /></a>
-
-      <ul class="social-links-mobile">
-        <li>
-          <a href="#facebook" class="social-logo-mobile"
-            ><i class="fab fa-facebook"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#twitter" class="social-logo-mobile"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#linkedin" class="social-logo-mobile"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-
-        <li>
-          <a href="#instagram" class="social-logo-mobile"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </li>
-      </ul>
 
       <label for="sidebar-active" class="open-sidebar-button">
         <svg
@@ -132,6 +359,7 @@
       </label>
 
       <div class="links-container">
+        &nbsp;&nbsp;
         <div class="dropdown">
           <li class="nav-item">
             <a href="index.html" class="nav-link"
@@ -142,34 +370,10 @@
 
         <div class="dropdown">
           <li class="nav-item">
-            <a href="aboutus.html" class="nav-link"
-              >About Us<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-          <!-- <div class="dropdown-content">
-            <a href="#">Vision and Mission</a>
-            <a href="#">Our Philosophy</a>
-            <a href="#">Management Team</a>
-            <a href="#">Infrastructure</a>
-            <a href="#">Testimonials </a>
-          </div> -->
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
             <a href="allcourses.html" class="nav-link"
               >All Courses<i class="fa fa-angle-right"></i
             ></a>
           </li>
-          <!-- <div class="dropdown-content">
-            <a href="#">UI/UX Developer</a>
-            <a href="#">AIML</a>
-            <a href="#">PYthon Full Stack</a>
-            <a href="#">Python for AIML</a>
-            <a href="#">Maths for ML </a>
-            <a href="#">MERN Stack</a>
-            <a href="#">Devops</a>
-          </div> -->
         </div>
 
         <div class="dropdown">
@@ -182,99 +386,99 @@
 
         <div class="dropdown">
           <li class="nav-item">
-            <a href="blog.html" class="nav-link"
-              >Blog<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="faq.html" class="nav-link"
-              >FAQ<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link"
-              >Contact<i class="fa fa-angle-right"></i
+            <a href="resources.html" class="nav-link"
+              >Resources<i class="fa fa-angle-right"></i
             ></a>
           </li>
           <div class="dropdown-content">
-            <a href="#">Enquiry</a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
           </div>
+        </div>
+
+        <div class="dropdown">
+          <li class="nav-item">
+            <a href="placements.html" class="nav-link"
+              >Placements<i class="fa fa-angle-right"></i
+            ></a>
+          </li>
         </div>
       </div>
     </nav>
-    <div class="container">
-      <div class="card">
+
+    <br />
+    <br />
+
+    <div class="card">
+      <div>
+        <br />
+        <h1>Python Full Stack Developer</h1>
+        <strong>What is this Program?</strong>
+        <div class="subtitle">
+          Become a versatile developer by mastering both front-end and back-end
+          technologies with Python as the core language. Build dynamic,
+          data-driven web applications from scratch.
+        </div>
+        <strong> Technologies Covered:</strong>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">Django/Flask</span>
+          <span class="chip">HTML/CSS/JS</span>
+          <span class="chip">APIs</span>
+          <span class="chip">SQL/NoSQL</span>
+          <span class="chip">Cloud Deployment</span>
+        </div>
+
+        <strong>Key Takeaways</strong>
+        <ul style="list-style-position: inside">
+          <li>
+            Learn front-end (HTML, CSS, JS) and back-end (Flask/Django)
+            development.
+          </li>
+
+          <li>Work with APIs, databases, and deployment tools.</li>
+
+          <li>Build complete web projects with real-world use cases.</li>
+
+          <li>Strengthen debugging, testing, and version control skills.</li>
+        </ul>
+
+        <br />
+
+        <strong>Industry-Ready Skills:</strong>
         <div>
-          <br />
-          <h1>Python Full Stack Developer</h1>
-          <strong>What is this Program?</strong>
-          <div class="subtitle">
-            Become a versatile developer by mastering both front-end and
-            back-end technologies with Python as the core language. Build
-            dynamic, data-driven web applications from scratch.
-          </div>
-          <strong> Technologies Covered:</strong>
-          <div class="chips">
-            <span class="chip">Python</span>
-            <span class="chip">Django/Flask</span>
-            <span class="chip">HTML/CSS/JS</span>
-            <span class="chip">APIs</span>
-            <span class="chip">SQL/NoSQL</span>
-            <span class="chip">Cloud Deployment</span>
-          </div>
+          Hands-on coding sessions and full-cycle development projects ensure
+          you can design, develop, and deploy scalable web applications
+          confidently.
+        </div>
 
-          <strong>Key Takeaways</strong>
-          <ul style="list-style-position: inside">
-            <li>
-              Learn front-end (HTML, CSS, JS) and back-end (Flask/Django)
-              development.
-            </li>
+        <br />
 
-            <li>Work with APIs, databases, and deployment tools.</li>
+        <strong>Career Pathways:</strong>
+        <div class="chips">
+          <span class="chip">Full Stack Developer</span>
+          <span class="chip"> Python Developer </span>
+          <span class="chip">Web Developer</span>
+          <span class="chip">Software Engineer</span>
+          <span class="chip">Automation Engineer</span>
+        </div>
 
-            <li>Build complete web projects with real-world use cases.</li>
+        <br />
 
-            <li>Strengthen debugging, testing, and version control skills.</li>
-          </ul>
+        <div class="outcome">
+          <strong>Outcome:</strong> Complete production-ready web application.
+        </div>
 
-          <br />
+        <br />
 
-          <strong>Industry-Ready Skills:</strong>
-          <div>
-            Hands-on coding sessions and full-cycle development projects ensure
-            you can design, develop, and deploy scalable web applications
-            confidently.
-          </div>
-
-          <br />
-
-          <strong>Career Pathways:</strong>
-          <div class="chips">
-            <span class="chip">Full Stack Developer</span>
-            <span class="chip"> Python Developer </span>
-            <span class="chip">Web Developer</span>
-            <span class="chip">Software Engineer</span>
-            <span class="chip">Automation Engineer</span>
-          </div>
-
-          <br />
-
-          <div class="outcome">
-            <strong>Outcome:</strong> Complete production-ready web application.
-          </div>
-
-          <br />
-
-          <div>
-            <button class="register-button">Register Now</button>
-            <!-- <button class="btn btn-secondary">View Curriculum</button> -->
-          </div>
+        <div>
+          <button class="register-button">Register Now</button>
+          <!-- <button class="btn btn-secondary">View Curriculum</button> -->
         </div>
       </div>
     </div>
