@@ -218,7 +218,7 @@ body {
   display: flex;
   align-items: center;
   gap: 50px;
-  padding-right: 170px;
+  padding-right: 400px;
 }
 
 .dropdown {
@@ -406,13 +406,14 @@ nav a {
   flex: 1;
   display: flex;
   justify-content: center;
-  min-width: 300px;
+  min-width: 100px;
 }
 
 .home-img-wrapper img {
   width: 100%;
   max-width: 650px;
-  height: 700px;
+  height: 550px;
+  padding-left: 150px;
 }
 
 /* Buttons */
