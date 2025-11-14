@@ -160,6 +160,10 @@ body {
   .social-icon {
     width: 20px;
   }
+
+  .schedule h1 {
+    text-align: center;
+  }
 }
 
 /* Mobile phones: hide contacts to avoid clutter, center social icons */
@@ -379,19 +383,25 @@ nav a {
   }
 }
 
-/* Left Text Section */
 .home-heading {
   flex: 1;
   min-width: 300px;
 }
 
 .home-heading h1 {
-  font-size: 40px;
-  color: #143264;
+  width: 1000px;
+  font-size: 37px;
+  color: var(--second);
   line-height: 1.2;
 }
 
-/* Right Image Section */
+.home-heading p {
+  width: 1000px;
+  font-size: 20px;
+  margin: 10px 0 0;
+  color: #fff;
+}
+
 .home-img-wrapper {
   flex: 1;
   display: flex;
@@ -401,8 +411,8 @@ nav a {
 
 .home-img-wrapper img {
   width: 100%;
-  max-width: 450px;
-  height: auto;
+  max-width: 650px;
+  height: 700px;
 }
 
 /* Buttons */
@@ -779,6 +789,10 @@ nav a {
 /* Mobile (1 column) */
 @media (max-width: 520px) {
   .services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     grid-template-columns: 1fr;
     gap: 16px;
   }
