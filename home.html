@@ -25,161 +25,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      .container {
-        width: 1300px;
-        margin: 50px auto;
-        padding: 20px;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        background-image: url(images/whitebackground.jpg);
-      }
-
-      .container h2 {
-        color: #143264;
-        padding-left: 10px;
-        margin-top: 40px;
-        text-align: center;
-      }
-
-      .feature-divider {
-        border: solid 3px;
-        display: block;
-        width: 110px;
-        height: 1px;
-        border-right: 0;
-        border-left: 0;
-        border-bottom: 0;
-        margin: 25px auto;
-        border-color: #333;
-      }
-
-      @media (max-width: 600px) {
-        .home-heading h1 {
-          width: 380px;
-          font-size: 20px;
-          color: white;
-          line-height: 1.2;
-          padding-top: 50px;
-        }
-
-        .home-heading p {
-          width: 290px;
-          font-size: 20px;
-          margin: 10px 0 0;
-          color: #fff;
-        }
-
-        .home-img-wrapper img {
-          display: none;
-        }
-
-        .logo-link {
-          margin: 0;
-          padding-left: 10px;
-        }
-
-        .logo-image {
-          width: 80px;
-        }
-
-        .links-container {
-          width: 250px;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          position: fixed;
-          top: 0;
-          left: -100%;
-          z-index: 10;
-          background-color: var(--second);
-          transition: 0.75s ease-out;
-        }
-
-        .social-links-desktop {
-          display: none;
-        }
-
-        .social-links-mobile {
-          display: flex;
-          list-style: none;
-        }
-
-        .social-logo-mobile {
-          padding: 10px;
-        }
-
-        nav a {
-          width: 100%;
-          justify-content: flex-start;
-          padding: 20px;
-          box-sizing: border-box;
-        }
-
-        .nav-link {
-          width: 180px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 20px;
-          font-weight: 500;
-          list-style: none;
-          box-sizing: border-box;
-          border: 1px solid var(--medium-grey);
-          color: var(--first);
-          transition: var(--transition);
-          padding-left: 20px;
-        }
-
-        .nav-link i {
-          display: block;
-        }
-
-        .open-sidebar-button {
-          display: flex;
-          padding-right: 10px;
-        }
-
-        #sidebar-active:checked ~ .links-container {
-          left: 0;
-        }
-      }
-
-      /* Very small phones */
-      @media (max-width: 420px) {
-        .home-heading h1 {
-          width: 290px;
-          font-size: 20px;
-          color: white;
-          line-height: 1.2;
-          padding-top: 50px;
-        }
-
-        .home-heading p {
-          width: 290px;
-          font-size: 20px;
-          margin: 10px 0 0;
-          color: #fff;
-        }
-
-        .home-img-wrapper img {
-          display: none;
-        }
-
-        .social-icon {
-          width: 16px;
-        }
-        .topbar-inner {
-          padding: 6px 10px;
-        }
-
-        .schedule {
-          width: 250px;
-          padding: none;
-        }
-      }
-    </style>
+    <script src="script.js"></script>
+    <style></style>
 
     <!-- Bootstrap JS Bundle -->
     <script
@@ -363,7 +210,9 @@
               >W
             </strong>
             <br />
-            <i>AI at Work, Innovation in Action.</i>
+            <i style="font-size: 18px"
+              >&nbsp; AI at Work, Innovation in Action.</i
+            >
             <br />
             <br />
             Ushnik Global Readiness for Opportunities & Workforce From
@@ -378,7 +227,13 @@
           <br />
 
           <div>
-            <button class="primary-btn">Explore Programs</button>
+            <button class="primary-btn">
+              <a
+                style="color: white; text-decoration: none"
+                href="programs.html"
+                >Explore Programs</a
+              >
+            </button>
             &nbsp;&nbsp;&nbsp;
             <button class="primary-btn">Enroll Now</button>
           </div>
@@ -387,6 +242,42 @@
         <div class="home-img-wrapper">
           <img src="./images/home.png" alt="Student" />
         </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <!-- Statistics -->
+    <div class="statistics">
+      <div class="counter-box">
+        <h2 class="counter" id="counter1">0</h2>
+        <div class="label">Students Placed</div>
+      </div>
+
+      <div class="counter-box">
+        <h2 class="counter" id="counter2">0</h2>
+        <div class="label">Drives Happened</div>
+      </div>
+
+      <div class="counter-box">
+        <h2 class="counter" id="counter3">0</h2>
+        <div class="label">Highest Package</div>
+      </div>
+
+      <div class="counter-box">
+        <h2 class="counter" id="counter4">0</h2>
+        <div class="label">Average Package</div>
+      </div>
+
+      <div class="counter-box">
+        <h2 class="counter" id="counter5">0</h2>
+        <div class="label">Expert Mentors</div>
+      </div>
+
+      <div class="counter-box">
+        <h2 class="counter" id="counter6">0</h2>
+        <div class="label">Learners Upskilled</div>
       </div>
     </div>
 
@@ -546,23 +437,24 @@
           </ul>
         </div>
 
-        <!-- Contact -->
+        <!-- Contact Us-->
         <div class="footer-col footer-col-contact">
           <h4 class="footer-heading">Contact Us</h4>
           <ul class="footer-list contact-list">
-            <li><a href="mailto:info@ushnik.in">info@ushnik.in</a></li>
             <li>
-              <a href="mailto:contact@ushniktechnologies.com"
-                >contact@ushniktechnologies.com</a
-              >
+              <strong> Let's have a chat: </strong>
+              <a href="#"> +91 77029 01217 </a>
             </li>
             <li>
-              <a
-                href="https://ushniktechnologies.com/"
-                target="_blank"
-                rel="noopener"
-                >www.ushniktechnologies.com</a
-              >
+              <strong> Drop us an Email: </strong>
+              <a href="mailto:info@ushnik.in">info@ushnik.in</a>
+            </li>
+            <li>
+              <strong> Visi us at our Address: </strong>
+              Vamsiram Jyothi Imperial Building, <br />
+              Plot No. 189 - 198, Survey No. 50, 4th Floor, Janardhan Hills,
+              Telecom Nagar, <br />
+              Near Gachibowli Flyover, Gachibowli, Hyderabad, Telengana 5000032
             </li>
           </ul>
         </div>
@@ -626,10 +518,5 @@
         </p>
       </div>
     </footer>
-
-    <!-- <script>
-  // Set current year dynamically
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-</script> -->
   </body>
 </html>

@@ -1,6 +1,6 @@
 :root {
-  --first: #000000;
-  --second: #ffffff;
+  --first: #0f1016;
+  --second: #fff;
   --third: #143264;
   --fourth: #fd5516;
   --dark-grey: #666666;
@@ -40,8 +40,10 @@ body {
 
 /* Theme vars (adjust to your project variables if available) */
 :root {
-  --topbar-bg: #143264; /* top bar background */
-  --topbar-text: #ffffff; /* text on topbar */
+  --first: #0f1016;
+  --second: #fff;
+  --third: #143264;
+  --fourth: #fd5516;
   --topbar-height-lg: 56px; /* desktop / laptop */
   --topbar-height-md: 56px; /* tablet (iPad) */
   --topbar-height-sm: 52px; /* mobile */
@@ -54,8 +56,8 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--topbar-bg);
-  color: var(--topbar-text);
+  background: var(--third);
+  color: var(--second);
   z-index: 9999;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -69,7 +71,6 @@ body {
 /* Inner container */
 .topbar-inner {
   max-width: var(--max-width);
-  height: 50px;
   margin: 0 auto;
   padding: 6px 20px;
   display: flex;
@@ -160,10 +161,6 @@ body {
   .social-icon {
     width: 20px;
   }
-
-  .schedule h1 {
-    text-align: center;
-  }
 }
 
 /* Mobile phones: hide contacts to avoid clutter, center social icons */
@@ -177,6 +174,7 @@ body {
   }
 
   .topbar-inner {
+    height: 65px;
     justify-content: center; /* center social icons horizontally */
   }
 
@@ -185,6 +183,25 @@ body {
   }
   .social-icon {
     width: 18px;
+  }
+
+  .social-logos-header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .social-icon {
+    width: 16px;
+  }
+  .topbar-inner {
+    padding: 6px 10px;
   }
 }
 
@@ -206,7 +223,7 @@ body {
   height: 100px;
   position: fixed;
   z-index: 9999;
-  top: 50px;
+  top: 40px;
   background-color: var(--second);
   display: flex;
   justify-content: center;
@@ -218,7 +235,7 @@ body {
   display: flex;
   align-items: center;
   gap: 50px;
-  padding-right: 400px;
+  padding-right: 170px;
 }
 
 .dropdown {
@@ -292,21 +309,6 @@ nav a {
   color: var(--first);
 }
 
-.social-links-desktop {
-  display: flex;
-  margin-left: 13%;
-  list-style: none;
-}
-
-.social-logo-desktop {
-  width: 30px;
-}
-
-.social-links-mobile {
-  display: none;
-  list-style: none;
-}
-
 .hamburger-menu-icon-black {
   fill: var(--first);
 }
@@ -318,6 +320,84 @@ nav a {
 .open-sidebar-button,
 .close-sidebar-button {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .logo-link {
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .logo-image {
+    width: 80px;
+  }
+
+  .social-logos-header ul {
+    gap: 14px;
+  }
+
+  .links-container {
+    width: 200px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 10;
+    background-color: var(--second);
+    transition: 0.75s ease-out;
+  }
+
+  .contacts {
+    display: none;
+  }
+
+  .topbar-inner {
+    justify-content: center; /* center social icons horizontally */
+  }
+
+  .social-logos-header ul {
+    gap: 14px;
+  }
+  .social-icon {
+    padding-bottom: 20px;
+    width: 18px;
+  }
+
+  nav a {
+    width: 80%;
+    justify-content: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .nav-link {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+    list-style: none;
+    box-sizing: border-box;
+    border: 1px solid var(--medium-grey);
+    color: var(--first);
+    transition: var(--transition);
+  }
+
+  .nav-link i {
+    display: block;
+  }
+
+  .open-sidebar-button {
+    display: flex;
+    padding-right: 10px;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    left: 0;
+  }
 }
 
 /* Home */
@@ -372,6 +452,56 @@ nav a {
     min-height: 100%;
     object-fit: cover;
   }
+
+  .logo-link {
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .logo-image {
+    width: 80px;
+  }
+
+  .links-container {
+    width: 200px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 10;
+    background-color: var(--second);
+    transition: 0.75s ease-out;
+  }
+  .nav-link {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+    list-style: none;
+    box-sizing: border-box;
+    border: 1px solid var(--medium-grey);
+    color: var(--first);
+    transition: var(--transition);
+  }
+
+  .nav-link i {
+    display: block;
+  }
+
+  .open-sidebar-button {
+    display: flex;
+    padding-right: 10px;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    left: 0;
+  }
+
+  /* Grid layput for course cards */
 }
 
 /* Smaller Mobiles */
@@ -383,37 +513,32 @@ nav a {
   }
 }
 
+/* Left Text Section */
 .home-heading {
+  color: var(--second);
   flex: 1;
   min-width: 300px;
 }
 
 .home-heading h1 {
-  width: 1000px;
-  font-size: 37px;
+  font-size: 40px;
   color: var(--second);
   line-height: 1.2;
 }
 
-.home-heading p {
-  width: 1000px;
-  font-size: 20px;
-  margin: 10px 0 0;
-  color: #fff;
-}
-
+/* Right Image Section */
 .home-img-wrapper {
   flex: 1;
   display: flex;
   justify-content: center;
-  min-width: 100px;
+  min-width: 300px;
 }
 
 .home-img-wrapper img {
+  display: block;
   width: 100%;
-  max-width: 650px;
-  height: 550px;
-  padding-left: 150px;
+  max-width: 450px;
+  height: auto;
 }
 
 /* Buttons */
@@ -448,6 +573,7 @@ nav a {
   }
 
   .home-img-wrapper img {
+    display: none;
     max-width: 350px;
   }
 }
@@ -466,10 +592,11 @@ nav a {
 
 /* Basic CSS variables (fallbacks if not defined elsewhere) */
 :root {
-  --first: #000000;
-  --second: #ffffff;
+  --first: #0f1016;
+  --second: #fff;
   --third: #143264;
   --fourth: #fd5516;
+  --fourth: #014735;
   --container-max: 1200px;
   --gutter: 24px;
   --bg-image: url("images/whitebackground.jpg");
@@ -519,13 +646,6 @@ nav a {
 }
 
 /* Paragraph sizing */
-.purpose-section h2 {
-  color: #143264;
-  border-left: 5px solid #143264;
-  padding-left: 5px;
-  margin-top: 40px;
-}
-
 .about-content p {
   font-size: 18px;
   line-height: 1.6;
@@ -534,120 +654,26 @@ nav a {
   max-width: 900px; /* limits line length for readability */
 }
 
-/*------------Course Cards------------*/
-.courses-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.courses-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  padding-top: 30px;
-}
-
-.course-card {
-  width: 200px;
-  height: 350px;
-  background-color: var(--second);
-  border-left: 5px solid #143264;
-  border-radius: 30px;
-  color: #fd5516;
-  text-align: center;
-}
-
-.course-card img {
-  width: 200px;
-  height: 150px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
-
-.course-card h4 {
-  padding-top: 40px;
-}
-
-.course-card button {
-  width: 150px;
-  height: 50px;
-  border-radius: 30px;
-  background-color: #fd5516;
-  color: #143264;
-}
-
-.course-card a {
-  color: #143264;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
-}
-/* ---------------- */
-
-.chips {
-  margin: 10px 0;
-}
-
-.chip {
-  border-radius: 20px;
-  display: inline-block;
-  padding: 6px 8px;
-  margin: 4px 4px 0 0;
-  border: 3px solid var(--third);
-  font-size: 13px;
-  color: var(--fourth);
-}
-
-.register-button {
-  width: 200px;
-  height: 80px;
-  background-color: var(--fourth);
-  border: none;
-  border-radius: 40px;
-  color: var(--second);
-  font-size: 20px;
-  font-weight: 600;
-  font-family: "Jost", sans-serif;
-  transition: var(--transition);
-}
-
-.register-button:hover {
-  width: 200px;
-  height: 80px;
-  background-color: var(--second);
-  border: none;
-  border-radius: 40px;
-  color: var(--fourth);
-  font-size: 20px;
-  font-weight: 600;
-  font-family: "Jost", sans-serif;
-  transition: var(--transition);
-  cursor: pointer;
-}
-
 /* Generic helper classes for cards */
 .card {
   display: flex;
   justify-content: center;
-  background: var(--second);
+  background: #fff;
   padding: 16px;
   gap: 16px;
   flex-wrap: wrap;
 }
 
 /* Buttons */
-/* .btn {
+.btn {
   padding: 8px 12px;
   border-radius: 20px;
   background: var(--fourth);
-  color: var(--second);
+  color: #fff;
   border: 1px solid var(--fourth);
   cursor: pointer;
   font-weight: bold;
-} */
+}
 
 /* ---------- Responsive Breakpoints ---------- */
 
@@ -690,9 +716,6 @@ nav a {
     text-justify: inter-word;
   }
 
-  .courses-top {
-    padding-top: 50px;
-  }
   .course-card {
     width: 160px;
     height: auto;
@@ -778,6 +801,26 @@ nav a {
 }
 
 /* ============= RESPONSIVE BREAKPOINTS ============= */
+@media (max-width: 600px) {
+  .services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .statistics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .statistics h2 {
+    text-align: center;
+  }
+}
 
 /* Tablets and small laptops (2 columns) */
 @media (max-width: 992px) {
@@ -790,10 +833,6 @@ nav a {
 /* Mobile (1 column) */
 @media (max-width: 520px) {
   .services {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     grid-template-columns: 1fr;
     gap: 16px;
   }
@@ -814,40 +853,12 @@ nav a {
     font-size: 14px;
     padding-inline: 8px;
   }
-}
 
-.white-button:hover {
-  width: 50px;
-  height: 50px;
-  background-color: var(--third);
-  border: none;
-  border-radius: 25px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-  color: var(--second);
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.blue-button {
-  width: 50px;
-  height: 50px;
-  background-color: var(--third);
-  border: none;
-  border-radius: 25px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-  color: var(--second);
-  transition: var(--transition);
-}
-
-.blue-button:hover {
-  width: 50px;
-  height: 50px;
-  background-color: var(--third);
-  border: none;
-  border-radius: 25px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-  color: var(--second);
-  cursor: pointer;
+  .courses-top,
+  .courses-bottom {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .services-card {
@@ -1014,6 +1025,67 @@ nav a {
   line-height: 1.2;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+/*------------Course Cards------------*/
+.courses-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.courses-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.course-card {
+  width: 200px;
+  height: 350px;
+  background-color: var(--second);
+  border-left: 5px solid #143264;
+  border-radius: 30px;
+  color: #fd5516;
+  text-align: center;
+}
+
+.course-card img {
+  width: 200px;
+  height: 150px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.course-card h4 {
+  padding-top: 40px;
+}
+
+.course-card button {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #fd5516;
+  color: #143264;
+}
+
+.course-card a {
+  color: #143264;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+/* ---------------- */
+
+.card {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 16px;
+  gap: 16px;
 }
 
 .news-column-2 button {
@@ -1224,8 +1296,6 @@ nav a {
 
 .footer-social ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 18px;
   padding: 0;
   margin: 0;
@@ -1248,7 +1318,7 @@ nav a {
 
 /* Footer bottom */
 .footer-bottom {
-  margin-top: 18px;
+  margin-top: none;
   padding: 18px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   text-align: center;
@@ -1264,8 +1334,8 @@ nav a {
 /* ---------------- Larger screens: multi-column layout ---------------- */
 @media (min-width: 760px) {
   .footer-inner {
-    grid-template-columns: 280px 1fr 1fr 1fr; /* Brand + 3 cols */
-    gap: 36px;
+    grid-template-columns: 250px 1fr 1fr 1fr; /* Brand + 3 cols */
+    gap: 20px;
     align-items: start;
   }
 
@@ -1274,7 +1344,7 @@ nav a {
   }
 
   .footer-social {
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 0;
   }
 
