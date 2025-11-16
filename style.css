@@ -1237,6 +1237,11 @@ nav a {
   justify-content: center;
 }
 
+.three-years-xp {
+  display: flex;
+  justify-content: center;
+}
+
 .freshers-list {
   list-style-position: inside;
   margin: 0;
