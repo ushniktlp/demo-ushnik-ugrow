@@ -174,7 +174,6 @@ body {
   }
 
   .topbar-inner {
-    height: 65px;
     justify-content: center; /* center social icons horizontally */
   }
 
@@ -307,6 +306,21 @@ nav a {
   align-items: center;
   text-decoration: none;
   color: var(--first);
+}
+
+.social-links-desktop {
+  display: flex;
+  margin-left: 13%;
+  list-style: none;
+}
+
+.social-logo-desktop {
+  width: 30px;
+}
+
+.social-links-mobile {
+  display: none;
+  list-style: none;
 }
 
 .hamburger-menu-icon-black {
@@ -500,8 +514,6 @@ nav a {
   #sidebar-active:checked ~ .links-container {
     left: 0;
   }
-
-  /* Grid layput for course cards */
 }
 
 /* Smaller Mobiles */
@@ -596,6 +608,7 @@ nav a {
   --second: #fff;
   --third: #143264;
   --fourth: #fd5516;
+  --fourth: #014735;
   --container-max: 1200px;
   --gutter: 24px;
   --bg-image: url("images/whitebackground.jpg");
@@ -651,6 +664,35 @@ nav a {
   color: #222;
   margin: 0;
   max-width: 900px; /* limits line length for readability */
+}
+
+/* Preserve your other classes (courses, cards, chips...) with slight responsive fixes */
+.courses-top,
+.courses-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  width: 200px;
+  height: 350px;
+  background-color: var(--second);
+  border-left: 5px solid var(--third);
+  border-radius: 30px;
+  color: var(--third);
+  text-align: center;
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.course-card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 /* Generic helper classes for cards */
@@ -852,12 +894,40 @@ nav a {
     font-size: 14px;
     padding-inline: 8px;
   }
+}
 
-  .courses-top,
-  .courses-bottom {
-    display: flex;
-    flex-direction: column;
-  }
+.white-button:hover {
+  width: 50px;
+  height: 50px;
+  background-color: var(--third);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  color: var(--second);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.blue-button {
+  width: 50px;
+  height: 50px;
+  background-color: var(--third);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  color: var(--second);
+  transition: var(--transition);
+}
+
+.blue-button:hover {
+  width: 50px;
+  height: 50px;
+  background-color: var(--third);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  color: var(--second);
+  cursor: pointer;
 }
 
 .services-card {
@@ -1060,6 +1130,7 @@ nav a {
 }
 
 .course-card h4 {
+  width: 180px;
   padding-top: 40px;
 }
 
@@ -1077,6 +1148,7 @@ nav a {
   font-size: 18px;
   font-weight: 700;
 }
+/* ---------------- */
 
 .chips {
   margin: 10px 0;
@@ -1118,9 +1190,6 @@ nav a {
   transition: var(--transition);
   cursor: pointer;
 }
-
-/* ---------------- */
-
 .card {
   display: flex;
   justify-content: center;
@@ -1232,11 +1301,6 @@ nav a {
   cursor: pointer;
 }
 
-.freshers {
-  display: flex;
-  justify-content: center;
-}
-
 .statistics {
   display: flex;
   justify-content: space-evenly;
@@ -1334,7 +1398,7 @@ nav a {
 
 /* Social bar */
 .footer-social {
-  margin-top: 18px;
+  padding-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1343,7 +1407,7 @@ nav a {
 .footer-social ul {
   display: flex;
   gap: 18px;
-  padding: 0;
+  padding-top: 20px;
   margin: 0;
   list-style: none;
 }
@@ -1378,10 +1442,10 @@ nav a {
 }
 
 /* ---------------- Larger screens: multi-column layout ---------------- */
-@media (min-width: 760px) {
+@media (min-width: 800px) {
   .footer-inner {
-    grid-template-columns: 250px 1fr 1fr 1fr; /* Brand + 3 cols */
-    gap: 20px;
+    grid-template-columns: 280px 1fr 1fr 1fr; /* Brand + 3 cols */
+    gap: 36px;
     align-items: start;
   }
 
@@ -1395,7 +1459,7 @@ nav a {
   }
 
   .footer-bottom {
-    padding-top: 26px;
+    padding-top: 15px;
   }
 }
 
