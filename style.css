@@ -596,7 +596,6 @@ nav a {
   --second: #fff;
   --third: #143264;
   --fourth: #fd5516;
-  --fourth: #014735;
   --container-max: 1200px;
   --gutter: 24px;
   --bg-image: url("images/whitebackground.jpg");
@@ -1078,6 +1077,48 @@ nav a {
   font-size: 18px;
   font-weight: 700;
 }
+
+.chips {
+  margin: 10px 0;
+}
+
+.chip {
+  border-radius: 20px;
+  display: inline-block;
+  padding: 6px 8px;
+  margin: 4px 4px 0 0;
+  border: 3px solid var(--third);
+  font-size: 13px;
+  color: var(--fourth);
+}
+
+.register-button {
+  width: 200px;
+  height: 80px;
+  background-color: var(--fourth);
+  border: none;
+  border-radius: 40px;
+  color: var(--second);
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Jost", sans-serif;
+  transition: var(--transition);
+}
+
+.register-button:hover {
+  width: 200px;
+  height: 80px;
+  background-color: var(--second);
+  border: none;
+  border-radius: 40px;
+  color: var(--fourth);
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Jost", sans-serif;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
 /* ---------------- */
 
 .card {
