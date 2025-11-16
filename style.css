@@ -1237,6 +1237,13 @@ nav a {
   justify-content: center;
 }
 
+.freshers-list {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+  line-height: 2.2;
+}
+
 .statistics {
   display: flex;
   justify-content: space-evenly;
