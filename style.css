@@ -576,6 +576,12 @@ nav a {
     display: none;
     max-width: 350px;
   }
+
+  .program-buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
@@ -585,6 +591,12 @@ nav a {
 
   .home-img-wrapper img {
     max-width: 300px;
+  }
+
+  .program-buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
