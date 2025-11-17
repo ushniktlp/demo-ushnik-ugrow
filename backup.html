@@ -1,118 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Mirrored from the97man.github.io/technology-website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 06:33:46 GMT -->
-  <!-- Added by HTTrack -->
-  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  <!-- /Added by HTTrack -->
-
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=utf-8"
+  /><!-- /Added by HTTrack -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ushnik Demo</title>
     <link rel="icon" type="image/png" href="./images/U_only_precise.png" />
 
-    <!-- Bootstrap 5 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-
-    <!-- Your existing stylesheet links -->
+    <!-- href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" -->
     <link rel="stylesheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+
+    <!-- href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap" -->
     <link rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css" />
-
     <style>
-      .schedule {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        padding: none;
+      .container {
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
 
-      .weekday {
-        width: 500px;
+      h2 {
+        color: #143264;
+        border-left: 5px solid #143264;
+        padding-left: 10px;
+        margin-top: 40px;
       }
 
-      .weekend {
-        width: 500px;
+      ul {
+        list-style-type: disc;
+        padding-left: 25px;
       }
 
-      .schedule h3 {
-        text-align: center;
-      }
-
-      table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        border: 5px solid black;
-        width: 100%;
-      }
-
-      td,
-      th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }
-
-      tr:nth-child(even) {
-        background-color: #dddddd;
-      }
-
-      /* Very small phones */
-      @media (max-width: 600px) {
-        .social-icon {
-          width: 16px;
-        }
-        .topbar-inner {
-          padding: 6px 10px;
-        }
-
-        .schedule {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          gap: 30px;
-          padding: none;
-        }
-
-        .schedule h1 {
-          text-align: center;
-        }
-
-        .schedule table {
-          font-family: arial, sans-serif;
-          border-collapse: collapse;
-          border: 5px solid black;
-          width: 100%;
-        }
-
-        td,
-        th {
-          border: 1px solid #dddddd;
-          text-align: left;
-          padding: 8px;
-        }
-
-        tr:nth-child(even) {
-          background-color: #dddddd;
-        }
+      p {
+        margin: 10px 0 0;
       }
     </style>
-
-    <!-- Bootstrap JS Bundle -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <!-- Top Navigation Bar -->
@@ -274,80 +208,63 @@
       </div>
     </nav>
 
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <div class="schedule">
-      <div class="weekday">
-        <table>
-          <h3>Weekday Batches</h3>
-          <tr>
-            <th>Course Name</th>
-            <th>Day and Time</th>
-          </tr>
-
-          <tr>
-            <td>UI/UX Developer</td>
-            <td>7 PM to 9 PM</td>
-          </tr>
-
-          <tr>
-            <td>Python Full Stack</td>
-            <td>6 PM to 8 PM</td>
-          </tr>
-
-          <tr>
-            <td>MERN Stack</td>
-            <td>8:30 PM to 10 PM</td>
-          </tr>
-
-          <tr>
-            <td>AI & Machine Learning</td>
-            <td>6:30 PM to 8:30 PM</td>
-          </tr>
-
-          <tr>
-            <td>Mathematics for ML</td>
-            <td>8 PM to 9 PM</td>
-          </tr>
-
-          <tr>
-            <td>DevOps Program</td>
-            <td>7:30 AM to 9 AM</td>
-          </tr>
-
-          <tr>
-            <td>SOC Analyst Program</td>
-            <td>Mon to Fri, 10 AM to 11 AM</td>
-          </tr>
-        </table>
+    <div class="container">
+      <div class="purpose-section">
+        <h2>Our Purpose</h2>
+        <p>
+          To make high-quality technology education accessible, practical, and
+          directly aligned with industry needs.
+        </p>
+        <p>
+          We enable learners to build real skills that translate into real
+          opportunities.
+        </p>
       </div>
 
-      <div class="weekend">
-        <table>
-          <h3>Weekend Batches</h3>
-          <tr>
-            <th>Course Name</th>
-            <th>Day and Time</th>
-          </tr>
+      <div class="offer-section">
+        <h2>What We Offer</h2>
+        <ul>
+          <li>Industry-curated tech programs</li>
+          <li>Hands-on labs, real-time assignments, and capstone projects</li>
+          <li>Job-oriented curriculum</li>
+          <li>Flexible learning schedules</li>
+          <li>Mentorship from practicing engineers and data scientists</li>
+          <li>
+            Certification from
+            <span class="highlight">Ushnik Technologies Pvt. Ltd.</span>
+          </li>
+        </ul>
+      </div>
 
-          <tr>
-            <td>Python for AI/ML</td>
-            <td>Sat & Sun, 10 AM – 12 PM</td>
-          </tr>
+      <div class="training-section">
+        <h2>Our Training Philosophy</h2>
+        <p>We believe in teaching through:</p>
+        <ul>
+          <li>Doing, not just listening</li>
+          <li>Solving problems, not memorizing theory</li>
+          <li>Building projects, not one-way lectures</li>
+        </ul>
+        <p>
+          Learners graduate with skill confidence, experience, and career
+          clarity.
+        </p>
+      </div>
 
-          <tr>
-            <td>DevOps</td>
-            <td>Sat & Sun, 3 PM – 5 PM</td>
-          </tr>
+      <div class="vision-section">
+        <h2>Our Vision</h2>
+        <p>
+          To become India’s most trusted skill development hub for emerging
+          technologies and applied engineering learning.
+        </p>
+      </div>
 
-          <tr>
-            <td>AI & ML Fast Track</td>
-            <td>Sat & Sun, 9 AM – 12 PM</td>
-          </tr>
-        </table>
+      <div class="mission-section">
+        <h2>Our Mission</h2>
+        <p>
+          To empower individuals with premium-quality, industry-driven training
+          that accelerates careers and strengthens India’s digital talent
+          ecosystem.
+        </p>
       </div>
     </div>
   </body>

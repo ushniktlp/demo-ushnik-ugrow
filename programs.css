@@ -1,58 +1,52 @@
-:root {
-  --first: #0f1016;
-  --second: #fff;
-  --third: #143264;
-  --fourth: #fd5516;
-  --dark-grey: #666666;
-  --medium-grey: #e6e0e0;
-  --light-grey: #fafafa;
-  --dark-footer: #1d152c;
-  --medium-footer: #291f3b;
-  --light-footer: #2a2238;
-  --title-family: "Manrope", sans-serif;
-  --outline-text: "Poppins", sans-serif;
-  --common-family: "Jost", sans-serif;
-  --transition: all 0.3s linear;
+.program-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
-body {
-  padding-top: 110px; /* Reserve space for sticky navbars */
-}
-
-.navbar {
-  background-color: var(--third);
-}
-
-/* Dark nav links */
-.nav-link-dark {
-  color: #333 !important;
-  font-weight: 500;
-  font-size: 16px;
-}
-
-/* Hover effect for cleaner UI */
-.nav-link-dark:hover {
-  color: #0d6efd !important; /* Bootstrap blue */
-}
-
-.program-btn {
-  padding: 12px 28px;
-  font-size: 1.05rem;
-  font-weight: 600;
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
   border-radius: 8px;
-  transition: all 0.25s ease;
-  background: linear-gradient(135deg, #0d6efd, #418dff);
-  border: none;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  width: 400px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-.program-btn:hover {
-  background: linear-gradient(135deg, #0b56ca, #266fdd);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 86, 210, 0.25);
+.button-64:active,
+.button-64:hover {
+  outline: 0;
 }
 
-.btn-primary:hover {
-  background-color: #0b5ed7; /* Darker shade on hover */
-  transform: scale(1.05); /* Slight zoom effect */
-  transition: all 0.3s ease;
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
 }
