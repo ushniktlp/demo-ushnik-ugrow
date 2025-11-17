@@ -1,326 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from the97man.github.io/technology-website/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 06:33:46 GMT -->
-  <!-- Added by HTTrack -->
-  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  <!-- /Added by HTTrack -->
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ushnik Demo</title>
-    <link rel="icon" type="image/png" href="./images/U_only_precise.png" />
-
-    <!-- Bootstrap 5 CSS -->
+    <title>Ushnik Bootstrap</title>
+    <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
 
-    <!-- Your existing stylesheet links -->
-    <link rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <style></style>
-
-    <!-- Bootstrap JS Bundle -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <!-- Top Navigation Bar -->
-    <nav class="top-navbar" role="banner" aria-label="Top information bar">
-      <div class="topbar-inner">
-        <!-- Left: Contacts -->
-        <div class="contacts" aria-label="Contact information">
-          <p>
-            <a href="#" class="contact-item">Hyderabad</a>
-            <span class="separator" aria-hidden="true">|</span>
-            <a href="tel:+917702901217" class="contact-item">+91 77029 01217</a>
-            <span class="separator" aria-hidden="true">|</span>
-            <a href="mailto:info@ushnik.in" class="contact-item"
-              >info@ushnik.in</a
-            >
-          </p>
+    <!-- Top Info Navbar (Sticky) -->
+    <nav class="navbar navbar-expand-lg py-2 fixed-top shadow">
+      <div class="container">
+        <div class="d-flex w-100 justify-content-between">
+          <div style="color: white" class="d-flex gap-3">
+            <span><i class="fas fa-map-marker-alt me-1"></i>Hyderabad</span>
+            <span><i class="fas fa-phone me-1"></i>+91 77029 01217 </span>
+            <span><i class="fas fa-envelope me-1"></i>info@ushnik.in</span>
+          </div>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
+      </div>
+    </nav>
 
-        <!-- Right: Social Icons -->
-        <div
-          class="social-logos-header"
-          role="navigation"
-          aria-label="Social links"
+    <!-- Main Navbar (Sticky) -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow"
+      style="top: 40px"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            style="width: 200px"
+            src="./images/U_GROW.png"
+            alt="U-GROW Logo"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <ul>
-            <li>
-              <a href="#" aria-label="YouTube"
-                ><img
-                  class="social-icon"
-                  src="images/youtube.png"
-                  alt="YouTube"
-              /></a>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="mainNavbar"
+        >
+          <ul class="navbar-nav gap-4">
+            <!-- gap-4 adds spacing -->
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="home.html">Home</a>
             </li>
-            <li>
-              <a href="#facebook" aria-label="Facebook"
-                ><img
-                  class="social-icon"
-                  src="images/facebook.png"
-                  alt="Facebook"
-              /></a>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="aboutus.html">About Us</a>
             </li>
-            <li>
-              <a href="#instagram" aria-label="Instagram"
-                ><img
-                  class="social-icon"
-                  src="images/instagram.png"
-                  alt="Instagram"
-              /></a>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="allcourses.html"
+                >All Courses</a
+              >
             </li>
-            <li>
-              <a href="#whatsapp" aria-label="WhatsApp"
-                ><img
-                  class="social-icon"
-                  src="images/whatsapp.png"
-                  alt="WhatsApp"
-              /></a>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="programs.html"
+                >Explore Programs</a
+              >
             </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/ushniktechnologies/"
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noopener"
-                ><img
-                  class="social-icon"
-                  src="images/linkedin.png"
-                  alt="LinkedIn"
-              /></a>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="schedule.html"
+                >Course Schedule</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="#">Resources</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="#">Placements</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Main Navigation Bar -->
-    <nav class="main-navbar">
-      <input type="checkbox" id="sidebar-active" />
-      <a class="logo-link" href="#"
-        ><img
-          style="width: 200px; height: 200px"
-          class="logo-image"
-          src="./images/U_GROW.png"
-          alt=""
-      /></a>
+    <div class="container my-5">
+      <div class="card shadow p-4">
+        <!-- Course Title -->
+        <h1 class="mb-4">MERN Stack Developer Program</h1>
 
-      <label for="sidebar-active" class="open-sidebar-button">
-        <svg
-          class="hamburger-menu-icon-black"
-          xmlns="http://www.w3.org/2000/svg"
-          height="32px"
-          viewBox="0 -960 960 960"
-          width="32px"
-          fill="#000"
-        >
-          <path
-            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-          />
-        </svg>
-      </label>
-
-      <div class="links-container">
-        &nbsp;&nbsp;
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link"
-              >Home<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="aboutus.html" class="nav-link"
-              >About Us<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="allcourses.html" class="nav-link"
-              >All Courses<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="programs.html" class="nav-link"
-              >Explore Programs<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="schedule.html" class="nav-link"
-              >Course Schedule<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="#" class="nav-link"
-              >Resources<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-          <div class="dropdown-content"></div>
-        </div>
-
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="#" class="nav-link"
-              >Placements<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
-      </div>
-    </nav>
-
-    <br />
-    <br />
-
-    <div class="card">
-      <div>
-        <br />
-        <h1>MERN Stack Developer Program</h1>
-        <strong>What is this Program?</strong>
-        <div class="subtitle">
+        <!-- What is this Program? -->
+        <h5 class="fw-bold">What is this Program?</h5>
+        <p class="text-secondary mb-4">
           Learn to develop powerful, full-stack web applications using MongoDB,
           Express.js, React, and Node.js — the most in-demand stack for modern
           web development.
-        </div>
-        <strong>Technologies:</strong>
-        <div class="chips">
-          <span class="chip">MongoDB</span>
-          <span class="chip">Express.js</span>
-          <span class="chip">React.js</span>
-          <span class="chip">Node.js</span>
-        </div>
+        </p>
 
-        <br />
-
-        <strong>Key Skills:</strong>
-        <div class="chips">
-          <span class="chip">HTML5, CSS3, JavaScript (ES6+)</span>
-          <span class="chip">React Components, Hooks, State Management</span>
-          <span class="chip">React Router & Protected Routes</span>
-          <span class="chip">Redux / Context API</span>
-          <br />
-          <span class="chip">Form Handling & Validation</span>
-          <span class="chip">UI Integration & API Communication</span>
-          <span class="chip">Responsive & Modern UI Design</span>
-          <span class="chip">Backend (Node.js + Express)</span>
-          <br />
-          <span class="chip">Node.js fundamentals</span>
-          <span class="chip">Express server & routing</span>
-          <span class="chip">REST API development</span>
-          <span class="chip">Authentication (JWT) & Authorization</span>
-          <br />
-          <span class="chip">Middleware, Error Handling</span>
-          <span class="chip">File Uploads & Backend Services</span>
-          <span class="chip">Database (MongoDB)</span>
-          <span class="chip">CRUD Operations</span>
-          <br />
-          <span class="chip">Schema Design (Mongoose)</span>
-          <span class="chip">Relations (Embed vs Reference)</span>
-          <span class="chip">Aggregation & Indexing</span>
-          <span class="chip">Full Stack Integration</span>
-          <br />
-          <span class="chip">Connecting React + Node + MongoDB</span>
-          <span class="chip">End-to-end Authentication Flow</span>
-          <span class="chip">State Management with Backend</span>
-          <span class="chip">API Consumption & Token Handling</span>
-          <br />
-          <span class="chip">Deployment & Tools</span>
-          <span class="chip">Git & GitHub</span>
-          <span class="chip">Deployment on Vercel / Netlify / Render</span>
-          <span class="chip">Environment Variables & Build Optimization</span>
-          <br />
-          <span class="chip">Postman & API Testing</span>
-          <span class="chip">Basic CI/CD Awareness</span>
-          <br />
-          <br />
-          <ul>
-            <strong>In Short --</strong>
-            <li style="list-style-position: inside">&nbsp;&nbsp;React</li>
-            <li style="list-style-position: inside">&nbsp;&nbsp;Node.js</li>
-            <li style="list-style-position: inside">&nbsp;&nbsp;Express</li>
-            <li style="list-style-position: inside">&nbsp;&nbsp;MongoDB</li>
-            <li style="list-style-position: inside">&nbsp;&nbsp;REST APIs</li>
-            <li style="list-style-position: inside">
-              &nbsp;&nbsp;Authentication
-            </li>
-            <li style="list-style-position: inside">
-              &nbsp;&nbsp;Full Stack Integration
-            </li>
-            <li style="list-style-position: inside">&nbsp;&nbsp;Deployment</li>
-          </ul>
+        <!-- Technologies -->
+        <h5 class="fw-bold mb-3">Technologies</h5>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span class="badge bg-info fs-6 py-2 px-3">MongoDB</span>
+          <span class="badge bg-info fs-6 py-2 px-3">Express.js</span>
+          <span class="badge bg-info fs-6 py-2 px-3">React.js</span>
+          <span class="badge bg-info fs-6 py-2 px-3">Node.js</span>
         </div>
 
-        <br />
+        <!-- Key Skills -->
+        <h5 class="fw-bold mb-3">Key Skills</h5>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span class="badge bg-primary fs-6 py-2 px-3"
+            >HTML5, CSS3, JS (ES6+)</span
+          >
+          <span class="badge bg-primary fs-6 py-2 px-3"
+            >React Components & Hooks</span
+          >
+          <span class="badge bg-primary fs-6 py-2 px-3"
+            >Redux / Context API</span
+          >
+          <span class="badge bg-primary fs-6 py-2 px-3">Node.js & Express</span>
+          <span class="badge bg-primary fs-6 py-2 px-3"
+            >REST APIs & JWT Auth</span
+          >
+          <span class="badge bg-primary fs-6 py-2 px-3"
+            >MongoDB & Mongoose</span
+          >
+          <span class="badge bg-primary fs-6 py-2 px-3"
+            >Full Stack Integration</span
+          >
+          <span class="badge bg-primary fs-6 py-2 px-3"
+            >Deployment (Vercel/Netlify/Render)</span
+          >
+          <span class="badge bg-primary fs-6 py-2 px-3">Git & GitHub</span>
+          <span class="badge bg-primary fs-6 py-2 px-3"
+            >API Testing with Postman</span
+          >
+        </div>
 
-        <strong>Key Takeaways</strong>
-        <ul style="list-style-position: inside">
-          <li>Build responsive, single-page applications using React.</li>
-
-          <li>Create robust back-end APIs with Node.js and Express.</li>
-
-          <li>Integrate MongoDB for data management.</li>
-
-          <li>Deploy live projects and manage cloud hosting environments.</li>
+        <!-- Key Takeaways -->
+        <h5 class="fw-bold">Key Takeaways</h5>
+        <ul class="list-group list-group-flush mb-4">
+          <li class="list-group-item">
+            Build responsive, single-page applications using React.
+          </li>
+          <li class="list-group-item">
+            Create robust back-end APIs with Node.js and Express.
+          </li>
+          <li class="list-group-item">
+            Integrate MongoDB for data management.
+          </li>
+          <li class="list-group-item">
+            Deploy live projects and manage cloud hosting environments.
+          </li>
         </ul>
 
-        <br />
-
-        <strong>Industry-Ready Skills:</strong>
-        <div>
+        <!-- Industry-Ready Skills -->
+        <h5 class="fw-bold">Industry-Ready Skills</h5>
+        <p class="text-secondary mb-4">
           Project-based learning ensures you gain hands-on coding expertise to
           confidently handle front-end, back-end, and database development.
+        </p>
+
+        <!-- Career Pathways -->
+        <h5 class="fw-bold mb-3">Career Pathways</h5>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span class="badge bg-success fs-6 py-2 px-3"
+            >MERN Stack Developer</span
+          >
+          <span class="badge bg-success fs-6 py-2 px-3"
+            >Front-End Engineer</span
+          >
+          <span class="badge bg-success fs-6 py-2 px-3"
+            >Back-End Developer</span
+          >
+          <span class="badge bg-success fs-6 py-2 px-3"
+            >Web Application Developer</span
+          >
         </div>
 
-        <br />
+        <!-- Outcome -->
+        <h5 class="fw-bold">Outcome</h5>
+        <p class="text-secondary mb-4">
+          A full-featured web application + Deployment.
+        </p>
 
-        <strong>Career Pathways:</strong>
-        <div class="chips">
-          <span class="chip">MERN Stack Developer</span>
-          <span class="chip">Front-End Engineer </span>
-          <span class="chip">Back-End Developer </span>
-          <span class="chip">Web Application Developer</span>
-        </div>
-
-        <br />
-
-        <div class="outcome">
-          <strong>Outcome:</strong> A full-featured web application +
-          Deployment.
-        </div>
-
-        <br />
-
-        <div>
-          <button class="register-button">Register Now</button>
-          <!-- <button class="btn btn-secondary">View Curriculum</button> -->
+        <!-- Register Button -->
+        <div class="mb-3">
+          <a
+            href="registration.html"
+            class="btn btn-success btn-lg rounded-pill px-5"
+          >
+            Register Now
+          </a>
         </div>
       </div>
     </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -35,24 +35,26 @@ body {
   color: #0d6efd !important; /* Bootstrap blue */
 }
 
-.program-btn {
-  padding: 12px 28px;
+.section-title {
+  font-weight: 700;
+  color: #333;
+}
+
+.section-block p {
   font-size: 1.05rem;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.25s ease;
-  background: linear-gradient(135deg, #0d6efd, #418dff);
-  border: none;
+  color: #555;
 }
 
-.program-btn:hover {
-  background: linear-gradient(135deg, #0b56ca, #266fdd);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 86, 210, 0.25);
+.section-block ul li {
+  font-size: 1.05rem;
+  color: #444;
 }
 
-.btn-primary:hover {
-  background-color: #0b5ed7; /* Darker shade on hover */
-  transform: scale(1.05); /* Slight zoom effect */
+.section-block {
   transition: all 0.3s ease;
+}
+
+.section-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 }

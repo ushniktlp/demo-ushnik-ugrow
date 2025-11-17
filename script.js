@@ -1,63 +1,26 @@
-function getSuffix(target) {
-  if (target === 27 || target === 3) {
-    return "+ LPA";
+function animateCounter(id, endValue, duration = 6000, suffix = "") {
+  let element = document.getElementById(id);
+  let startValue = 0;
+  let startTime = null;
+
+  function update(timestamp) {
+    if (!startTime) startTime = timestamp;
+    let progress = Math.min((timestamp - startTime) / duration, 1);
+    let currentValue = Math.floor(progress * endValue);
+    element.textContent = currentValue + suffix;
+
+    if (progress < 1) requestAnimationFrame(update);
   }
-  if (target === 600 || target === 20) {
-    return "+";
-  }
-  return "K+";
+
+  requestAnimationFrame(update);
 }
 
-function animateCounter(id, target) {
-  let duration = Math.random() * (8000 - 5000) + 5000; // 5–8 sec
-  let fps = 30;
-  let steps = duration / fps;
-  let stepValue = target / steps;
-
-  let count = 0;
-  let suffix = getSuffix(target);
-
-  let counter = setInterval(() => {
-    count += stepValue;
-
-    if (count >= target) {
-      count = target;
-      clearInterval(counter);
-    }
-
-    let display;
-
-    // K formatting with ONE decimal, unless decimal is .0 → remove it
-    if (suffix === "K+" && target >= 1000) {
-      let value = count / 1000;
-      let rounded = value.toFixed(1); // e.g., 2.3 or 5.0
-
-      // If value ends in .0 → show as whole number (5K+)
-      if (rounded.endsWith(".0")) {
-        display = parseInt(rounded) + "K+";
-      } else {
-        display = rounded + "K+";
-      }
-    }
-
-    // 27+ LPA, 3+ LPA
-    else if (suffix === "+ LPA") {
-      display = Math.floor(count) + "+ LPA";
-    }
-
-    // 600+ or 20+
-    else {
-      display = Math.floor(count) + "+";
-    }
-
-    document.getElementById(id).textContent = display;
-  }, fps);
-}
-
-// Animate each counter
-animateCounter("counter1", 2300); // 2.3K+
-animateCounter("counter2", 600); // 600+
-animateCounter("counter3", 27); // 27+ LPA
-animateCounter("counter4", 3); // 3+ LPA
-animateCounter("counter5", 20); // 20+
-animateCounter("counter6", 5000); // 5K+
+// Run on every reload
+document.addEventListener("DOMContentLoaded", function () {
+  animateCounter("counter1", 2300, 6000, "+"); // Students Placed
+  animateCounter("counter2", 150, 6000, "+"); // Drives Happened
+  animateCounter("counter3", 27, 6000, "+ LPA"); // Highest Package
+  animateCounter("counter4", 3, 6000, "+ LPA"); // Average Package
+  animateCounter("counter5", 50, 6000, "+"); // Expert Mentors
+  animateCounter("counter6", 5000, 6000, "+"); // Learners Upskilled
+});
