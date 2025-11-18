@@ -176,8 +176,8 @@
     <!-- Statistics -->
     <div style="display: flex; gap: 100px" class="statistics">
       <div class="counter-box">
-        <h2 class="counter" id="counter1" data-start="15" data-target="2300">
-          15
+        <h2 class="counter" id="counter1" data-start="1200" data-target="2300">
+          1.2K
         </h2>
         <div class="label">Students Placed</div>
       </div>
@@ -205,8 +205,8 @@
       </div>
 
       <div class="counter-box">
-        <h2 class="counter" id="counter6" data-start="15" data-target="5000">
-          15
+        <h2 class="counter" id="counter6" data-start="1200" data-target="5000">
+          1.2K
         </h2>
         <div class="label">Learners Upskilled</div>
       </div>
@@ -242,7 +242,7 @@
         const target = parseInt(element.getAttribute("data-target"));
 
         function runAnimation() {
-          element.textContent = start; // Set initial value
+          element.textContent = formatValue(target, start); // Set initial formatted value
           setTimeout(() => {
             let startTime = null;
 
