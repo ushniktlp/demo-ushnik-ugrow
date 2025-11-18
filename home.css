@@ -42,6 +42,100 @@ body {
   }
 }
 
+/* Individual letter spacing adjustments */
+.ugrow-u {
+  color: #143264;
+}
+
+.ugrow-o {
+  color: #fd5516;
+  margin-left: -0.3rem;
+} /* Bring O closer to R */
+
+/* Base styles for UGROW letters */
+.ugrow-text span {
+  display: inline-block;
+}
+
+/* Ensure the image is responsive */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.statistics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.counter {
+  font-size: 2.5rem;
+  font-weight: 700;
+  visibility: hidden;
+}
+
+.label {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.services-card {
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  text-align: center; /* also centers title & text */
+}
+
+.services-card img {
+  width: 60px;
+  margin: 0 auto 15px auto; /* center horizontally */
+  display: block;
+}
+
+.training-card {
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.training-card img {
+  width: 70px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.about-content h1 {
+  font-weight: 700;
+}
+
+.about-image {
+  border-radius: 12px;
+}
+
+#about-us-section {
+  background-image: url("images/whitebackground.jpg"); /* your uploaded image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fafafa;
+  background-blend-mode: lighten;
+  padding: 60px 0;
+}
+
 .footer-links a:hover {
   color: #0d6efd;
 }
@@ -54,6 +148,49 @@ body {
 
 .social-icon:hover {
   transform: scale(1.1);
+}
+
+.full-screen-map {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+.full-screen-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Sticky left social bar */
+.social-bar {
+  position: fixed;
+  top: 50%;
+  left: 15px; /* moved slightly away from the edge */
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-bar a {
+  display: block;
+  margin: 8px 0;
+  width: 50px; /* adjust as needed for your PNG */
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.social-bar a:hover {
+  transform: scale(1.1); /* slight zoom on hover */
+}
+
+.social-bar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-lightgrey {
