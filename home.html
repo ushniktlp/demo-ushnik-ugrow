@@ -9,6 +9,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ushnik Demo</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="icon" type="image/png" href="./images/U_only_precise.png" />
 
     <!-- Bootstrap 5 CSS -->
@@ -24,6 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link rel="stylesheet" />
+    <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <style></style>
@@ -36,161 +44,93 @@
     ></script>
   </head>
   <body>
-    <!-- Top Navigation Bar -->
-    <nav class="top-navbar" role="banner" aria-label="Top information bar">
-      <div class="topbar-inner">
-        <!-- Left: Contacts -->
-        <div class="contacts" aria-label="Contact information">
-          <p>
-            <a href="#" class="contact-item">Hyderabad</a>
-            <span class="separator" aria-hidden="true">|</span>
-            <a href="tel:+917702901217" class="contact-item">+91 77029 01217</a>
-            <span class="separator" aria-hidden="true">|</span>
-            <a href="mailto:info@ushnik.in" class="contact-item"
-              >info@ushnik.in</a
-            >
-          </p>
-        </div>
-
-        <!-- Right: Social Icons -->
-        <div
-          class="social-logos-header"
-          role="navigation"
-          aria-label="Social links"
-        >
-          <ul>
-            <li>
-              <a href="#" aria-label="YouTube"
-                ><img
-                  class="social-icon"
-                  src="images/youtube.png"
-                  alt="YouTube"
-              /></a>
-            </li>
-            <li>
-              <a href="#facebook" aria-label="Facebook"
-                ><img
-                  class="social-icon"
-                  src="images/facebook.png"
-                  alt="Facebook"
-              /></a>
-            </li>
-            <li>
-              <a href="#instagram" aria-label="Instagram"
-                ><img
-                  class="social-icon"
-                  src="images/instagram.png"
-                  alt="Instagram"
-              /></a>
-            </li>
-            <li>
-              <a href="#whatsapp" aria-label="WhatsApp"
-                ><img
-                  class="social-icon"
-                  src="images/whatsapp.png"
-                  alt="WhatsApp"
-              /></a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/ushniktechnologies/"
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noopener"
-                ><img
-                  class="social-icon"
-                  src="images/linkedin.png"
-                  alt="LinkedIn"
-              /></a>
-            </li>
-          </ul>
+    <!-- Top Info Navbar (Sticky) -->
+    <nav class="navbar navbar-expand-lg py-2 fixed-top shadow">
+      <div class="container">
+        <div class="d-flex w-100 justify-content-between">
+          <div style="color: white" class="d-flex gap-3">
+            <span><i class="fas fa-map-marker-alt me-1"></i>Hyderabad</span>
+            <span><i class="fas fa-phone me-1"></i>+91 77029 01217 </span>
+            <span><i class="fas fa-envelope me-1"></i>info@ushnik.in</span>
+          </div>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
     </nav>
 
-    <!-- Main Navigation Bar -->
-    <nav class="main-navbar">
-      <input type="checkbox" id="sidebar-active" />
-      <a class="logo-link" href="#"
-        ><img
-          style="width: 200px; height: 200px"
-          class="logo-image"
-          src="./images/U_GROW.png"
-          alt=""
-      /></a>
-
-      <label for="sidebar-active" class="open-sidebar-button">
-        <svg
-          class="hamburger-menu-icon-black"
-          xmlns="http://www.w3.org/2000/svg"
-          height="32px"
-          viewBox="0 -960 960 960"
-          width="32px"
-          fill="#000"
-        >
-          <path
-            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+    <!-- Main Navbar (Sticky) -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow"
+      style="top: 40px"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            style="width: 200px"
+            src="./images/U_GROW.png"
+            alt="U-GROW Logo"
           />
-        </svg>
-      </label>
+        </a>
 
-      <div class="links-container">
-        &nbsp;&nbsp;
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link"
-              >Home<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="aboutus.html" class="nav-link"
-              >About Us<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="mainNavbar"
+        >
+          <ul class="navbar-nav gap-4">
+            <!-- gap-4 adds spacing -->
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="home.html">Home</a>
+            </li>
 
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="allcourses.html" class="nav-link"
-              >All Courses<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="aboutus.html">About Us</a>
+            </li>
 
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="programs.html" class="nav-link"
-              >Explore Programs<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="allcourses.html"
+                >All Courses</a
+              >
+            </li>
 
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="schedule.html" class="nav-link"
-              >Course Schedule<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-        </div>
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="programs.html"
+                >Explore Programs</a
+              >
+            </li>
 
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="#" class="nav-link"
-              >Resources<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
-          <div class="dropdown-content"></div>
-        </div>
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="schedule.html"
+                >Course Schedule</a
+              >
+            </li>
 
-        <div class="dropdown">
-          <li class="nav-item">
-            <a href="#" class="nav-link"
-              >Placements<i class="fa fa-angle-right"></i
-            ></a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="#">Resources</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-dark" href="#">Placements</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -415,134 +355,182 @@
     <br />
 
     <!-- Footer -->
-    <footer class="site-footer" aria-label="Site footer">
-      <div class="footer-inner">
-        <!-- Logo / Brand -->
-        <div class="footer-col footer-col-brand">
-          <a class="logo-footer" href="#" aria-label="U-GROW home">
-            <img
-              class="logo-image"
-              src="./images/U_GROW.png"
-              alt="U-GROW logo"
-            />
-          </a>
+    <footer class="pt-5 pb-4 footer-lightgrey">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Brand Logo -->
+          <div class="col-12 col-sm-6 col-lg-3 text-center text-sm-start">
+            <a href="#" aria-label="U-GROW home">
+              <img
+                src="./images/U_GROW.png"
+                alt="U-GROW logo"
+                class="img-fluid mb-3"
+                style="max-width: 180px"
+              />
+            </a>
+          </div>
+
+          <!-- Useful Links -->
+          <div class="col-6 col-sm-6 col-lg-3">
+            <h5 class="mb-3">Useful Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li>
+                <a href="#" class="text-dark text-decoration-none">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-dark text-decoration-none">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-dark text-decoration-none"
+                  >Enroll Now</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-dark text-decoration-none"
+                  >Refer & Earn</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Courses -->
+          <div class="col-6 col-sm-6 col-lg-3">
+            <h5 class="mb-3">All Courses</h5>
+            <ul class="list-unstyled footer-links">
+              <li>
+                <a href="uiux.html" class="text-dark text-decoration-none"
+                  >UI/UX Developer</a
+                >
+              </li>
+              <li>
+                <a href="aiml.html" class="text-dark text-decoration-none"
+                  >AI & Machine Learning Program</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pythonfullstack.html"
+                  class="text-dark text-decoration-none"
+                  >Python Full Stack Developer</a
+                >
+              </li>
+              <li>
+                <a href="pythonaiml.html" class="text-dark text-decoration-none"
+                  >Python for AI & ML</a
+                >
+              </li>
+              <li>
+                <a href="mathsml.html" class="text-dark text-decoration-none"
+                  >Advanced Math for ML</a
+                >
+              </li>
+              <li>
+                <a href="mern.html" class="text-dark text-decoration-none"
+                  >MERN Stack Developer</a
+                >
+              </li>
+              <li>
+                <a href="devops.html" class="text-dark text-decoration-none"
+                  >DevOps Program</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <h5 class="mb-3">Contact Us</h5>
+            <ul class="list-unstyled">
+              <li>
+                <strong>Phone:</strong>
+                <a href="#" class="text-dark text-decoration-none">
+                  +91 77029 01217
+                </a>
+              </li>
+              <li class="mt-2">
+                <strong>Email:</strong>
+                <a
+                  href="mailto:info@ushnik.in"
+                  class="text-dark text-decoration-none"
+                >
+                  info@ushnik.in
+                </a>
+              </li>
+              <li class="mt-2">
+                <strong>Address:</strong><br />
+                Vamsiram Jyothi Imperial Building, Plot No. 189 - 198, Survey
+                No. 50,<br />
+                4th Floor, Janardhan Hills, Telecom Nagar,<br />
+                Near Gachibowli Flyover, Hyderabad, Telangana 500032
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Useful Links -->
-        <div class="footer-col footer-col-links">
-          <h4 class="footer-heading">Useful Links</h4>
-          <ul class="footer-list">
-            <li><a href="">Home</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Enroll Now</a></li>
-            <li><a href="">Refer and Earn</a></li>
-          </ul>
+        <!-- Social Icons -->
+        <div class="row mt-4">
+          <div class="col text-center">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mx-2">
+                <a href="#"
+                  ><img
+                    src="images/youtube.png"
+                    alt="YouTube"
+                    class="social-icon"
+                /></a>
+              </li>
+              <li class="list-inline-item mx-2">
+                <a href="#"
+                  ><img
+                    src="images/facebook.png"
+                    alt="Facebook"
+                    class="social-icon"
+                /></a>
+              </li>
+              <li class="list-inline-item mx-2">
+                <a href="#"
+                  ><img
+                    src="images/instagram.png"
+                    alt="Instagram"
+                    class="social-icon"
+                /></a>
+              </li>
+              <li class="list-inline-item mx-2">
+                <a href="#"
+                  ><img
+                    src="images/whatsapp.png"
+                    alt="WhatsApp"
+                    class="social-icon"
+                /></a>
+              </li>
+              <li class="list-inline-item mx-2">
+                <a
+                  href="https://www.linkedin.com/company/ushniktechnologies/"
+                  target="_blank"
+                >
+                  <img
+                    src="images/linkedin.png"
+                    alt="LinkedIn"
+                    class="social-icon"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Courses -->
-        <div class="footer-col footer-col-courses">
-          <h4 class="footer-heading">All Courses</h4>
-          <ul class="footer-list">
-            <li><a href="uiux.html">UI/UX Developer</a></li>
-            <li><a href="aiml.html">AI &amp; Machine Learning Program</a></li>
-            <li>
-              <a href="pythonfullstack.html">Python Full Stack Developer</a>
-            </li>
-            <li><a href="pythonaiml.html">Python for AI and ML</a></li>
-            <li>
-              <a href="mathsml.html"
-                >Advanced Mathematics for Machine Learning</a
-              >
-            </li>
-            <li><a href="mern.html">MERN Stack Developer Program</a></li>
-            <li><a href="devops.html">DevOps Program</a></li>
-          </ul>
+        <!-- Copyright -->
+        <div class="row mt-4">
+          <div class="col text-center">
+            <p class="mb-0">
+              © Ushnik Technologies Pvt. Ltd. — All rights reserved.
+            </p>
+          </div>
         </div>
-
-        <!-- Contact Us-->
-        <div class="footer-col footer-col-contact">
-          <h4 class="footer-heading">Contact Us</h4>
-          <ul class="footer-list contact-list">
-            <li>
-              <strong> Let's have a chat: </strong>
-              <a href="#"> +91 77029 01217 </a>
-            </li>
-            <li>
-              <strong> Drop us an Email: </strong>
-              <a href="mailto:info@ushnik.in">info@ushnik.in</a>
-            </li>
-            <li>
-              <strong> Visi us at our Address: </strong>
-              Vamsiram Jyothi Imperial Building, <br />
-              Plot No. 189 - 198, Survey No. 50, 4th Floor, Janardhan Hills,
-              Telecom Nagar, <br />
-              Near Gachibowli Flyover, Gachibowli, Hyderabad, Telengana 500032
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Social -->
-      <div class="footer-social" aria-label="Social links">
-        <ul>
-          <li>
-            <a href="#" aria-label="YouTube"
-              ><img
-                class="social-logo-footer"
-                src="images/youtube.png"
-                alt="YouTube"
-            /></a>
-          </li>
-
-          <li>
-            <a href="#facebook" aria-label="Facebook"
-              ><img
-                class="social-logo-footer"
-                src="images/facebook.png"
-                alt="Facebook"
-            /></a>
-          </li>
-
-          <li>
-            <a href="#instagram" aria-label="Instagram"
-              ><img
-                class="social-logo-footer"
-                src="images/instagram.png"
-                alt="Instagram"
-            /></a>
-          </li>
-
-          <li>
-            <a href="#whatsapp" aria-label="WhatsApp"
-              ><img
-                class="social-logo-footer"
-                src="images/whatsapp.png"
-                alt="WhatsApp"
-            /></a>
-          </li>
-
-          <li>
-            <a
-              href="https://www.linkedin.com/company/ushniktechnologies/"
-              aria-label="LinkedIn"
-              target="_blank"
-              rel="noopener"
-              ><img
-                class="social-logo-footer"
-                src="images/linkedin.png"
-                alt="LinkedIn"
-            /></a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Copyright / Bottom -->
-      <div class="footer-bottom">
-        <p class="copyright">
-          © <span id="current-year"></span> Ushnik Technologies Pvt. Ltd. — All
-          rights reserved.
-        </p>
       </div>
     </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
