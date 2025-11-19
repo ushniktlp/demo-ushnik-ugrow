@@ -63,6 +63,20 @@ body {
   height: auto;
 }
 
+.btn {
+  font-weight: 700;
+  background-color: #fd5516;
+  color: #143264;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  font-weight: 700;
+  background-color: #fd5516;
+  color: #143264;
+  transform: scale(1.1);
+}
+
 .statistics {
   display: flex;
   flex-wrap: wrap;
@@ -152,7 +166,7 @@ body {
 
 .full-screen-map {
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 80vh;
 }
 
 .full-screen-map iframe {
@@ -175,7 +189,7 @@ body {
 .social-bar a {
   display: block;
   margin: 8px 0;
-  width: 50px; /* adjust as needed for your PNG */
+  width: 35px; /* adjust as needed for your PNG */
   height: 50px;
   border-radius: 8px;
   overflow: hidden;
@@ -195,10 +209,10 @@ body {
 
 .footer-lightgrey {
   background-color: #f2f2f2; /* Light grey */
-  color: #333; /* Dark text for readability */
+  color: white; /* Dark text for readability */
 }
 .footer-lightgrey a {
-  color: #333;
+  color: white;
 }
 .footer-lightgrey a:hover {
   color: #0d6efd; /* Bootstrap primary blue hover */
@@ -206,13 +220,13 @@ body {
 
 /* Light grey footer background */
 .footer-lightgrey {
-  background-color: #f2f2f2;
-  color: #333; /* Unified text color for all columns */
+  background-color: #143264;
+  color: white; /* Unified text color for all columns */
 }
 
 /* Footer links (Useful Links, All Courses, Contact) */
 .footer-lightgrey a {
-  color: #333; /* Same color as Contact Us text */
+  color: white; /* Same color as Contact Us text */
   text-decoration: none;
 }
 
@@ -223,6 +237,6 @@ body {
 /* Footer headings */
 .footer-lightgrey h5,
 .footer-lightgrey h4 {
-  color: #333; /* Same heading color across all columns */
+  color: white; /* Same heading color across all columns */
   font-weight: 600;
 }

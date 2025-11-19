@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ushnik Bootstrap</title>
+    <title>Ushnik</title>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -26,9 +26,28 @@
       <div class="container">
         <div class="d-flex w-100 justify-content-between">
           <div style="color: white" class="d-flex gap-3">
-            <span><i class="fas fa-map-marker-alt me-1"></i>Hyderabad</span>
-            <span><i class="fas fa-phone me-1"></i>+91 77029 01217 </span>
-            <span><i class="fas fa-envelope me-1"></i>info@ushnik.in</span>
+            <span
+              ><i class="fas fa-map-marker-alt me-1"></i
+              ><a style="color: white; text-decoration: none" href="#hyderabad"
+                >Hyderabad</a
+              ></span
+            >
+            <span
+              ><i class="fas fa-phone me-1"></i>
+              <a
+                style="color: white; text-decoration: none"
+                href="https://wa.me/917702901217"
+                >+91 77029 01217</a
+              ></span
+            >
+            <span
+              ><i class="fas fa-envelope me-1"></i
+              ><a
+                style="color: white; text-decoration: none"
+                href="mailto:info@ushnik.in"
+                >info@ushnik.in</a
+              ></span
+            >
           </div>
           <div class="d-flex gap-3">
             <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
@@ -101,7 +120,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link nav-link-dark" href="#">Resources</a>
+              <a class="nav-link nav-link-dark" href="#">Contact Us</a>
             </li>
 
             <li class="nav-item">
@@ -116,7 +135,75 @@
     <br />
 
     <div class="container text-center py-4">
-      <div class="d-flex flex-wrap justify-content-center gap-3">
+      <video
+        class="w-100 position-absolute top-0 start-0 vh-100"
+        autoplay
+        muted
+        loop
+        playsinline
+        style="object-fit: cover; z-index: -2"
+      >
+        <source src="./programs-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="program-buttons">
+        <div class="program-card">
+          <img
+            src="./images/certificate.png"
+            alt="Program Image"
+            class="program-img"
+          />
+          <button class="button-64" role="button">
+            <span class="text">
+              <a
+                style="color: white; text-decoration: none"
+                href="certificate.html"
+              >
+                Certificate Program
+              </a>
+            </span>
+          </button>
+        </div>
+
+        <div class="program-card">
+          <img
+            src="./images/internship.png"
+            alt="Program Image"
+            class="program-img"
+          />
+          <button class="button-64" role="button">
+            <span class="text">
+              <a
+                style="color: white; text-decoration: none"
+                href="internship.html"
+              >
+                Internship Program
+              </a>
+            </span>
+          </button>
+        </div>
+
+        <div class="program-card">
+          <img
+            src="./images/placement.png"
+            alt="Program Image"
+            class="program-img"
+          />
+          <button class="button-64" role="button">
+            <span class="text">
+              <a
+                style="color: white; text-decoration: none"
+                href="placement.html"
+              >
+                Placement Program
+              </a>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- <div class="d-flex flex-wrap justify-content-center gap-3">
         <a href="certificate.html" class="btn btn-primary program-btn">
           Certificate Program
         </a>
@@ -128,7 +215,7 @@
         <a href="placement.html" class="btn btn-primary program-btn">
           Placement Program
         </a>
-      </div>
+      </div> -->
     </div>
 
     <!-- Bootstrap JS Bundle -->
