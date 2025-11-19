@@ -16,7 +16,7 @@
 }
 
 body {
-  padding-top: 110px; /* Reserve space for sticky navbars */
+  background: black;
 }
 
 .navbar {
@@ -35,6 +35,57 @@ body {
   color: #0d6efd !important; /* Bootstrap blue */
 }
 
+/* ============================= */
+/*     FULLSCREEN VIDEO STYLE    */
+/* ============================= */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark overlay (optional but makes text & buttons pop) */
+.video-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* ============================= */
+/*     BUTTONS + IMAGE AREA      */
+/* ============================= */
+
+.overlay-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.program-buttons {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .program-card {
   display: flex;
   flex-direction: column;
@@ -42,76 +93,36 @@ body {
   gap: 15px;
 }
 
+/* Program Images */
 .program-img {
-  width: 120px; /* adjust size */
-  height: 120px; /* adjust size */
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 10px; /* optional */
+  border-radius: 10px;
 }
 
-.program-btn {
-  padding: 12px 28px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.25s ease;
-  background: linear-gradient(135deg, #0d6efd, #418dff);
-  border: none;
-}
-
-.program-btn:hover {
-  background: linear-gradient(135deg, #0b56ca, #266fdd);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 86, 210, 0.25);
-}
-
-.btn-primary:hover {
-  background-color: #0b5ed7; /* Darker shade on hover */
-  transform: scale(1.05); /* Slight zoom effect */
-  transition: all 0.3s ease;
-}
-
-.program-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 150px;
-  gap: 50px;
-}
-
+/* Beautiful Button */
 .button-64 {
   align-items: center;
   background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-  box-sizing: border-box;
   color: #ffffff;
   display: flex;
-  font-family: Phantomsans, sans-serif;
   font-size: 20px;
   justify-content: center;
-  width: 400px;
+  width: 320px;
   padding: 3px;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
   cursor: pointer;
-}
-
-.button-64:active,
-.button-64:hover {
-  outline: 0;
+  text-decoration: none;
 }
 
 .button-64 span {
   background-color: rgb(5, 6, 45);
-  padding: 16px 24px;
+  padding: 14px 22px;
   border-radius: 6px;
   width: 100%;
-  height: 100%;
   transition: 300ms;
 }
 
@@ -119,9 +130,49 @@ body {
   background: none;
 }
 
-@media (min-width: 768px) {
+/* ============================= */
+/*         RESPONSIVE FIXES      */
+/* ============================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .program-img {
+    width: 135px;
+    height: 135px;
+  }
   .button-64 {
-    font-size: 24px;
-    min-width: 196px;
+    width: 360px;
+    font-size: 18px;
+  }
+}
+
+/* Large Mobiles */
+@media (max-width: 768px) {
+  .program-buttons {
+    gap: 35px;
+  }
+  .program-img {
+    width: 120px;
+    height: 120px;
+  }
+  .button-64 {
+    width: 300px;
+    font-size: 16px;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+  .program-buttons {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .program-img {
+    width: 100px;
+    height: 100px;
+  }
+  .button-64 {
+    width: 250px;
+    font-size: 15px;
   }
 }
