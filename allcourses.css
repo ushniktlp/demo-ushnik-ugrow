@@ -66,8 +66,15 @@ body {
   margin: 15px 0;
 }
 
-.btn-primary {
-  border-radius: 8px;
-  padding: 10px 0;
-  font-weight: 600;
+.btn {
+  font-weight: 700;
+  background-color: #fd5516;
+  color: #143264;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  font-weight: 700;
+  background-color: #fd5516;
+  color: #143264;
 }
