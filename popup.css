@@ -16,17 +16,54 @@
   --transition: all 0.3s linear;
 }
 
+/* Default styling for Refer & Earn tab */
+#refer-tab {
+  background-color: #d10000 !important; /* Red background */
+  color: #ffffff !important; /* White text */
+  font-weight: 800;
+  border-radius: 6px 6px 0 0;
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+#refer-tab:hover {
+  background-color: #b30000 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* Make the active state look stronger */
+#refer-tab.active {
+  background-color: #ff0000 !important;
+  color: #ffffff !important;
+  border-bottom: 2px solid #ffffff !important;
+}
+
+/* Optional: soften the SOC tab slightly to make Refer tab pop more */
+#soc-tab {
+  background-color: #f2f2f2;
+  color: #333;
+  border-radius: 6px 6px 0 0;
+}
+#soc-tab.active {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+
 #refer {
-  background: var(--fourth) !important;
+  background: #fd9b2f !important;
   color: var(--second) !important;
   border-radius: 8px;
   padding: 20px;
 }
 
 #refer h4,
-#refer p,
-#refer label {
+#refer p {
   color: var(--second) !important;
+}
+
+#refer label {
+  color: var(--first);
 }
 
 #refer .form-control {
