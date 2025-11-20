@@ -38,6 +38,16 @@ body {
   border-radius: 10px;
 }
 
+.social-icon-header {
+  width: 25px;
+  height: 25px;
+  transition: 0.3s ease;
+}
+
+.social-icon-header:hover {
+  transform: scale(1.1);
+}
+
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .ugrow-o {
