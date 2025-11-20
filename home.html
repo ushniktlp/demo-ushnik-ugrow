@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="popup.css" />
+    <link rel="stylesheet" href="panel.css" />
     <style></style>
     <script src="script.js" defer></script>
   </head>
@@ -576,6 +577,60 @@
       </div>
     </div>
 
+    <div id="offerPanel" class="offer-panel">
+      <div
+        style="text-align: center; font-weight: 800"
+        id="offerTab"
+        class="offer-tab"
+      >
+        Refer & Earn
+      </div>
+
+      <!-- REFER & EARN CONTENT -->
+      <h5 class="fw-bold mt-3">Refer & Earn</h5>
+      <p style="font-size: 14px">
+        Refer your friends or colleagues to UGROW programs and earn exclusive
+        referral benefits. <br />
+        <strong>*T&C Apply</strong><br />
+        <em
+          >Only the referrer receives the benefit. The referred person does not
+          receive any discount.</em
+        >
+      </p>
+
+      <!-- Referral Code Input -->
+      <div class="mt-2">
+        <label class="form-label fw-bold" style="font-size: 14px"
+          >Enter Your First Name</label
+        >
+        <input
+          type="text"
+          id="panelRefName"
+          class="form-control form-control-sm"
+          placeholder="Example: Rahul"
+        />
+      </div>
+
+      <!-- Generate Button -->
+      <button
+        style="background-color: #143264; color: white"
+        class="btn btn-sm mt-2"
+        onclick="generatePanelCode()"
+      >
+        Generate Code
+      </button>
+
+      <!-- Show Generated Code -->
+      <div class="mt-2" id="panelRefOutput" style="display: none">
+        <p class="fw-bold mb-1" style="font-size: 14px">Your Referral Code:</p>
+        <div
+          id="panelRefCode"
+          class="p-2 border rounded bg-light fw-bold"
+          style="font-size: 14px"
+        ></div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="pt-5 pb-4 footer-lightgrey">
       <div class="container">
@@ -773,6 +828,31 @@
         const formatted = name.charAt(0).toUpperCase() + name.slice(1);
         const code = `UG-${formatted}`;
 
+        codeBox.innerText = code;
+        output.style.display = "block";
+      }
+
+      const panel = document.getElementById("offerPanel");
+      const tab = document.getElementById("offerTab");
+
+      tab.addEventListener("click", () => {
+        panel.classList.toggle("open");
+        document.body.classList.toggle("shifted");
+      });
+
+      // Referral code for panel
+      function generatePanelCode() {
+        const name = document.getElementById("panelRefName").value.trim();
+        const output = document.getElementById("panelRefOutput");
+        const codeBox = document.getElementById("panelRefCode");
+
+        if (name === "") {
+          alert("Please enter your first name.");
+          return;
+        }
+
+        const formatted = name.charAt(0).toUpperCase() + name.slice(1);
+        const code = `UG-${formatted}`;
         codeBox.innerText = code;
         output.style.display = "block";
       }
