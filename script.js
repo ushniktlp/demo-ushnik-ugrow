@@ -59,9 +59,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // SOC Analyst Program Pop-Up
-document.addEventListener("DOMContentLoaded", function () {
+/* document.addEventListener("DOMContentLoaded", function () {
   var socModal = new bootstrap.Modal(
     document.getElementById("socProgramModal")
   );
   socModal.show();
+}); */
+
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = new bootstrap.Modal(
+    document.getElementById("mergedProgramModal")
+  );
+  modal.show();
 });

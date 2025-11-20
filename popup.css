@@ -1,0 +1,79 @@
+/* REFER & EARN POPUP CUSTOM DESIGN */
+:root {
+  --first: #0f1016;
+  --second: #fff;
+  --third: #143264;
+  --fourth: #fd5516;
+  --dark-grey: #666666;
+  --medium-grey: #e6e0e0;
+  --light-grey: #fafafa;
+  --dark-footer: #1d152c;
+  --medium-footer: #291f3b;
+  --light-footer: #2a2238;
+  --title-family: "Manrope", sans-serif;
+  --outline-text: "Poppins", sans-serif;
+  --common-family: "Jost", sans-serif;
+  --transition: all 0.3s linear;
+}
+
+#refer {
+  background: var(--fourth) !important;
+  color: var(--second) !important;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+#refer h4,
+#refer p,
+#refer label {
+  color: var(--second) !important;
+}
+
+#refer .form-control {
+  border: 2px solid #ffffffaa;
+  background: #ffffff22;
+  color: var(--second);
+}
+
+#refer .form-control::placeholder {
+  color: #ffffffcc;
+}
+
+#refer .form-control:focus {
+  background: #ffffff33;
+  border-color: var(--second);
+  color: var(--second);
+  box-shadow: 0 0 5px #ffffffaa;
+}
+
+/* Button inside Refer Tab */
+#refer button.btn {
+  background: var(--third) !important;
+  color: var(--second) !important;
+  font-weight: bold;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+#refer button.btn:hover {
+  background: var(--third) !important;
+  color: var(--second) !important;
+}
+
+/* Referral Code Box */
+#refOutput {
+  color: var(--second);
+}
+
+#refCode {
+  background: #ffffff22 !important;
+  border: 2px solid #ffffffaa !important;
+  color: var(--second);
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
