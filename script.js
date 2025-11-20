@@ -1,4 +1,4 @@
-// Format the final displayed number
+// Statistics Numbers
 function formatValue(target, value) {
   if (target === 27 || target === 3) return Math.floor(value) + "+ LPA";
   if (target === 600 || target === 20) return Math.floor(value) + "+";
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".counter").forEach((el) => startCounter(el));
 });
 
-// SOC Analyst Program
+// SOC Analyst Program Pop-Up
 document.addEventListener("DOMContentLoaded", function () {
   var socModal = new bootstrap.Modal(
     document.getElementById("socProgramModal")
