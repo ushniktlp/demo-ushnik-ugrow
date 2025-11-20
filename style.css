@@ -25,7 +25,7 @@ body {
 
 /* Dark nav links */
 .nav-link-dark {
-  color: #333 !important;
+  color: var(--third) !important;
   font-weight: 500;
   font-size: 16px;
   border-radius: 10px;
