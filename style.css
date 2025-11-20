@@ -28,11 +28,14 @@ body {
   color: #333 !important;
   font-weight: 500;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 /* Hover effect for cleaner UI */
 .nav-link-dark:hover {
-  color: #0d6efd !important; /* Bootstrap blue */
+  color: var(--second) !important;
+  background-color: var(--third);
+  border-radius: 10px;
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
@@ -44,14 +47,22 @@ body {
   .student {
     margin-top: -200px; /* Adjust this value as needed */
   }
+
+  .social-bar {
+    display: none;
+  }
 }
 
 /*Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) {
+@media (max-width: 770.98px) {
   .student {
     display: block; /* Adjust this value as needed */
     height: 270px;
     margin-left: 15px;
+  }
+
+  .social-bar {
+    display: none;
   }
 }
 
