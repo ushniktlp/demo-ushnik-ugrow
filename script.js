@@ -57,3 +57,11 @@ function startCounter(element, duration = 6000, delay = 3000) {
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".counter").forEach((el) => startCounter(el));
 });
+
+// SOC Analyst Program
+document.addEventListener("DOMContentLoaded", function () {
+  var socModal = new bootstrap.Modal(
+    document.getElementById("socProgramModal")
+  );
+  socModal.show();
+});
