@@ -4,6 +4,7 @@
   --second: #fff;
   --third: #143264;
   --fourth: #fd5516;
+  --fifth: #ff0000;
   --dark-grey: #666666;
   --medium-grey: #e6e0e0;
   --light-grey: #fafafa;
@@ -19,7 +20,7 @@
 /* Default styling for Refer & Earn tab */
 #refer-tab {
   background-color: #d10000 !important; /* Red background */
-  color: #ffffff !important; /* White text */
+  color: var(--second) !important; /* White text */
   font-weight: 800;
   border-radius: 6px 6px 0 0;
   transition: 0.3s ease;
@@ -28,7 +29,7 @@
 /* Hover effect */
 #refer-tab:hover {
   background-color: #b30000 !important;
-  color: #ffffff !important;
+  color: var(--second) !important;
   transform: translateY(-2px);
 }
 

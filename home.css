@@ -23,7 +23,7 @@
 }
 
 /* Individual letter spacing adjustments */
-.ugrow-u {
+/* .ugrow-u {
   color: #143264;
 }
 
@@ -33,9 +33,9 @@
 } /* Bring O closer to R */
 
 /* Base styles for UGROW letters */
-.ugrow-text span {
+/* .ugrow-text span {
   display: inline-block;
-}
+} */
 
 /* Ensure the image is responsive */
 .img-fluid {

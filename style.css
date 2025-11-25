@@ -50,9 +50,9 @@ body {
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .ugrow-o {
+  /* .ugrow-o {
     margin-left: -0.1rem;
-  }
+  } */
 
   .student {
     margin-top: -200px; /* Adjust this value as needed */
@@ -78,9 +78,9 @@ body {
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
-  .ugrow-o {
+  /* .ugrow-o {
     margin-left: -0.2rem;
-  }
+  } */
 
   .student {
     width: 300px;
