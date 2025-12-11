@@ -45,14 +45,14 @@
 
 .btn {
   font-weight: 700;
-  background-color: #fd5516;
+  background-color: #fdae06;
   color: #143264;
   transition: 0.3s ease;
 }
 
 .btn:hover {
   font-weight: 700;
-  background-color: #fd5516;
+  background-color: #fdae06;
   color: #143264;
   transform: scale(1.1);
 }
